@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,10 +15,13 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Våra tjänster", href: "#tjanster" },
-    { name: "Om oss", href: "#om-oss" },
-    { name: "Referenser", href: "#referenser" },
-    { name: "Begär en offert", href: "#kontakt" },
+    { name: "Våra tjänster", href: "#tjanster", hasDropdown: true },
+    { name: "Nyheter", href: "#nyheter", hasDropdown: true },
+    { name: "Jobba hos oss", href: "#jobb", hasDropdown: true },
+    { name: "Referenser", href: "#referenser", hasDropdown: false },
+    { name: "Taktips", href: "#taktips", hasDropdown: false },
+    { name: "Om oss", href: "#om-oss", hasDropdown: false },
+    { name: "Begär en offert", href: "#kontakt", hasDropdown: false },
   ];
 
   return (
@@ -27,46 +30,71 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled 
+          ? "bg-background/95 backdrop-blur-md shadow-lg" 
+          : "bg-transparent"
       }`}
     >
       <div className="section-container">
-        <div className="flex items-center justify-between py-4 lg:py-5">
-          {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <div className="flex items-center">
-              <span className="text-2xl lg:text-3xl font-bold text-primary">DM</span>
-              <span className="text-2xl lg:text-3xl font-bold text-foreground ml-1">TAK</span>
-            </div>
-          </a>
+        <div className="flex items-center justify-between py-4">
+          {/* Left: Logo + Phone */}
+          <div className="flex items-center gap-8">
+            {/* Logo */}
+            <a href="/" className="flex items-center">
+              <div className="bg-primary px-4 py-2 rounded">
+                <span className="text-xl font-bold text-primary-foreground tracking-wide">DM<span className="mx-1">•</span>TAK</span>
+              </div>
+            </a>
+
+            {/* Phone */}
+            <a 
+              href="tel:08-6047445" 
+              className={`hidden md:flex items-center gap-2 text-sm font-medium transition-colors ${
+                isScrolled ? "text-foreground" : "text-primary-foreground"
+              }`}
+            >
+              <Phone className="w-4 h-4" />
+              <span className="underline">08 – 604 74 45</span>
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-link text-sm"
+                className={`nav-link text-sm transition-colors ${
+                  isScrolled ? "text-foreground/80 hover:text-foreground" : "text-primary-foreground/90 hover:text-primary-foreground"
+                }`}
               >
                 {link.name}
+                {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a href="#kontakt" className="btn-primary text-sm">
+          {/* CTA Button + Hamburger */}
+          <div className="flex items-center gap-4">
+            <a 
+              href="#kontakt" 
+              className={`hidden lg:inline-flex btn-primary text-sm ${
+                isScrolled ? "" : "bg-muted-foreground/80 hover:bg-muted-foreground"
+              }`}
+            >
               Kontakta oss
             </a>
+            
+            {/* Hamburger Menu */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`p-2 transition-colors ${
+                isScrolled ? "text-foreground" : "text-primary-foreground"
+              }`}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-foreground p-2"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </div>
 
@@ -76,17 +104,26 @@ const Header = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-background border-t border-border"
+          className="bg-background border-t border-border shadow-lg"
         >
           <div className="section-container py-6 flex flex-col gap-4">
+            <a 
+              href="tel:08-6047445" 
+              className="flex items-center gap-2 text-foreground font-medium py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Phone className="w-4 h-4" />
+              <span className="underline">08 – 604 74 45</span>
+            </a>
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-link text-base py-2"
+                className="nav-link text-base py-2 text-foreground"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
+                {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
               </a>
             ))}
             <a

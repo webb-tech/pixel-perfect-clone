@@ -47,7 +47,7 @@ const Services = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} id="tjanster" className="bg-background py-20 lg:py-32">
+    <section ref={ref} id="tjanster" className="section-white py-20 lg:py-32">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -55,8 +55,13 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="heading-lg text-foreground mb-4">Våra tjänster</h2>
-          <h3 className="heading-md text-muted-foreground mb-6">De tjänster vi erbjuder inom tak</h3>
+          <div className="slug-tag justify-center mb-4">
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z"/>
+            </svg>
+            VÅRA TJÄNSTER
+          </div>
+          <h2 className="heading-lg text-foreground mb-4">De tjänster vi erbjuder inom tak</h2>
           <p className="text-body max-w-3xl mx-auto">
             Vi erbjuder flera olika tjänster inom tak. Så oavsett om du behöver ett helt nytt tak, 
             en ommålning av ditt plåttak, modern taksäkerhet eller snöskottning av ditt tak, finns vi här för dig!
@@ -80,9 +85,9 @@ const Services = () => {
               />
               <div className="service-card-overlay group-hover:from-black/95" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h4 className="text-xl font-semibold text-foreground mb-2">{service.title}</h4>
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{service.description}</p>
-                <span className="inline-flex items-center gap-2 text-foreground font-medium text-sm group-hover:text-primary transition-colors">
+                <h4 className="text-xl font-semibold text-white mb-2">{service.title}</h4>
+                <p className="text-white/80 text-sm mb-4 line-clamp-2">{service.description}</p>
+                <span className="inline-flex items-center gap-2 text-white font-medium text-sm group-hover:text-primary transition-colors">
                   Läs mer
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
@@ -97,8 +102,8 @@ const Services = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <a href="#tjanster" className="btn-secondary">
-            Våra tjänster
+          <a href="#tjanster" className="btn-primary">
+            Alla våra tjänster
             <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>
