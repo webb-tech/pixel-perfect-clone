@@ -8,7 +8,7 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} id="kontakt" className="bg-background py-20 lg:py-32">
+    <section ref={ref} id="kontakt" className="section-beige py-20 lg:py-32">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Contact Info */}
@@ -17,7 +17,12 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-primary font-semibold mb-4">Kontakta oss</h2>
+            <div className="slug-tag mb-4">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              KONTAKTA OSS
+            </div>
             <h3 className="heading-lg text-foreground mb-6">
               Begär en kostnadsfri offert
             </h3>

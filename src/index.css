@@ -4,87 +4,87 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* DM TAK Design System - Dark luxury industrial aesthetic */
+/* DM TAK Design System - Light professional aesthetic */
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 355 97% 45%;
+    --primary: 355 85% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 13%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 30 20% 94%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 30 15% 92%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 355 97% 45%;
+    --accent: 355 85% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 355 97% 45%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 355 85% 45%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 355 97% 45%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 355 85% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 355 97% 45%;
+    --sidebar-accent: 30 20% 94%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 355 85% 45%;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 355 97% 45%;
+    --primary: 355 85% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 13%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 30 20% 94%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 30 15% 92%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 355 97% 45%;
+    --accent: 355 85% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 355 97% 45%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 355 85% 45%;
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 355 97% 45%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 355 85% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 355 97% 45%;
+    --sidebar-accent: 30 20% 94%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 355 85% 45%;
   }
 }
 
@@ -105,15 +105,23 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-md transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02];
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-md transition-all duration-300 hover:bg-primary/90;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-md transition-all duration-300 hover:bg-secondary/80 hover:scale-[1.02];
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-foreground font-semibold transition-all duration-300 hover:text-primary;
   }
 
   .section-container {
     @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-beige {
+    @apply bg-secondary;
+  }
+
+  .section-white {
+    @apply bg-background;
   }
 
   .heading-xl {
@@ -132,15 +140,19 @@
     @apply text-base md:text-lg text-muted-foreground leading-relaxed;
   }
 
+  .slug-tag {
+    @apply inline-flex items-center gap-2 text-primary font-semibold uppercase text-sm tracking-wider;
+  }
+
   .service-card {
     @apply relative overflow-hidden rounded-lg cursor-pointer;
   }
 
   .service-card-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300;
+    @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition-all duration-300;
   }
 
   .nav-link {
-    @apply text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium;
+    @apply text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium flex items-center gap-1;
   }
 }

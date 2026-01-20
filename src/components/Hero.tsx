@@ -3,26 +3,26 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background pt-20 overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/95" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop')`,
+        }}
+      />
       
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--foreground)) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40" />
 
-      <div className="section-container relative z-10 py-20 lg:py-32">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="section-container relative z-10 py-32 lg:py-40">
+        <div className="max-w-xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="heading-xl text-foreground mb-6">
+            <h1 className="heading-xl text-white mb-4">
               Takläggning i Stockholm
             </h1>
           </motion.div>
@@ -31,7 +31,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl md:text-2xl text-primary font-medium mb-6"
+            className="text-lg md:text-xl text-white/90 mb-6"
           >
             –Specialiserade på BRFer
           </motion.p>
@@ -40,7 +40,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-body max-w-2xl mx-auto mb-10"
+            className="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-lg"
           >
             DM TAK är i grund och botten ett familjeföretag där kunskap om takläggning
             gått i arv i tre generationer. Vi är experter på takläggning i Stockholm och är alltid
@@ -51,57 +51,61 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-wrap items-center gap-4"
           >
-            <a href="#kontakt" className="btn-primary group">
+            <a href="#kontakt" className="btn-primary">
               Kontakta oss
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="#tjanster" className="btn-secondary group">
+            <a href="#tjanster" className="btn-secondary text-white hover:text-white/80">
               Våra tjänster
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4" />
             </a>
-          </motion.div>
-
-          {/* Reco Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-16 flex justify-center"
-          >
-            <div className="bg-card rounded-lg px-6 py-4 flex items-center gap-4 border border-border">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                  </svg>
-                ))}
-              </div>
-              <div className="text-left">
-                <p className="text-foreground font-semibold text-sm">600+ verifierade omdömen</p>
-                <p className="text-muted-foreground text-xs">Rekommenderad takläggare</p>
-              </div>
-            </div>
           </motion.div>
         </div>
+
+        {/* Reco Badges - positioned to the right */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="absolute right-8 lg:right-20 top-1/3 hidden lg:flex items-center gap-4"
+        >
+          {/* 5 år i rad badge */}
+          <div className="bg-white rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-lg">
+            <span className="text-primary text-xs font-semibold">REKOMMENDERAT</span>
+            <span className="text-primary text-2xl font-bold">5</span>
+            <span className="text-primary text-xs">ÅR I RAD</span>
+            <span className="text-green-600 text-[10px] font-bold">reco</span>
+          </div>
+          
+          {/* Year badges */}
+          <div className="flex gap-1">
+            {[2025, 2024, 2023, 2022, 2021, 2017, 2016, 2015].map((year) => (
+              <div 
+                key={year} 
+                className="bg-white rounded-full w-10 h-10 flex flex-col items-center justify-center shadow-md text-[8px]"
+              >
+                <span className="text-primary font-bold">{year}</span>
+                <span className="text-green-600 font-bold">reco</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      {/* Floating contact button */}
+      <motion.a
+        href="#kontakt"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.3 }}
+        className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors"
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center"
-        >
-          <motion.div className="w-1.5 h-3 bg-muted-foreground rounded-full mt-2" />
-        </motion.div>
-      </motion.div>
+        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </motion.a>
     </section>
   );
 };
