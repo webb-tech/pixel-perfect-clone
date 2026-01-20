@@ -133,7 +133,7 @@
   }
 
   .service-card {
-    @apply relative overflow-hidden rounded-lg group cursor-pointer;
+    @apply relative overflow-hidden rounded-lg cursor-pointer;
   }
 
   .service-card-overlay {

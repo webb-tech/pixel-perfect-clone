@@ -71,7 +71,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="service-card aspect-square"
+              className="service-card group aspect-square"
             >
               <img
                 src={service.image}
