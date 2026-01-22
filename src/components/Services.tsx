@@ -3,113 +3,140 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
+import elinstallationImg from "@/assets/img/elinstallation.jpg";
+import belysningImg from "@/assets/img/belysning.jpg";
+import felsokningImg from "@/assets/img/felsökning.jpg";
+import elcentralImg from "@/assets/img/elcentral.jpg";
+
 const services = [
-  {
-    title: "Takläggning",
-    description: "Professionell och fackmannamässig takläggning av erfarna takläggare.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=720&h=720&fit=crop",
-    href: "#",
-  },
-  {
-    title: "Plåtslageri",
-    description: "I vår plåtverkstad förbereder vi den plåt som vi sedan monterar på ditt tak.",
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=720&h=720&fit=crop",
-    href: "#",
-  },
-  {
-    title: "Taksäkerhet",
-    description: "Taksäkerhet innebär att kunna beträda och arbeta på taket med hjälp av taksäkerhetsanordningar.",
-    image: "https://images.unsplash.com/photo-1541123603104-512919d6a96c?w=720&h=720&fit=crop",
-    href: "#",
-  },
-  {
-    title: "Takservice",
-    description: "Vi rekommenderar att taket ses över varje år för maximal livslängd.",
-    image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=720&h=720&fit=crop",
-    href: "#",
-  },
-  {
-    title: "Takmålning",
-    description: "En takmålning kan ge taket ett nytt liv och ett extra skydd mot rost och slitage.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=720&h=720&fit=crop",
-    href: "#",
-  },
-  {
-    title: "Snöskottning",
-    description: "Var ute i god tid med snöskottning innan skador uppstår på tak och omgivning.",
-    image: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=720&h=720&fit=crop",
-    href: "#",
-  },
+    {
+        title: "Elinstallation",
+        description:
+            "Professionell och fackmannamässig takläggning av erfarna takläggare.",
+        image: elinstallationImg,
+        href: "#",
+    },
+    {
+        title: "Belysning",
+        description:
+            "I vår plåtverkstad förbereder vi den plåt som vi sedan monterar på ditt tak.",
+        image: belysningImg,
+        href: "#",
+    },
+    {
+        title: "Smarta hem",
+        description:
+            "Taksäkerhet innebär att kunna beträda och arbeta på taket med hjälp av taksäkerhetsanordningar.",
+        image: "https://images.unsplash.com/photo-1541123603104-512919d6a96c?w=720&h=720&fit=crop",
+        href: "#",
+    },
+    {
+        title: "Felsökning",
+        description:
+            "Vi rekommenderar att taket ses över varje år för maximal livslängd.",
+        image: felsokningImg,
+        href: "#",
+    },
+    {
+        title: "Elcentral",
+        description:
+            "En takmålning kan ge taket ett nytt liv och ett extra skydd mot rost och slitage.",
+        image: elcentralImg,
+        href: "#",
+    },
+    {
+        title: "Ugn/spishäll",
+        description:
+            "Var ute i god tid med snöskottning innan skador uppstår på tak och omgivning.",
+        image: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=720&h=720&fit=crop",
+        href: "#",
+    },
 ];
 
 const Services = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  return (
-    <section ref={ref} id="tjanster" className="section-white py-20 lg:py-32">
-      <div className="section-container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+    return (
+        <section
+            ref={ref}
+            id="tjanster"
+            className="section-white py-20 lg:py-32"
         >
-          <div className="slug-tag justify-center mb-4">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z"/>
-            </svg>
-            VÅRA TJÄNSTER
-          </div>
-          <h2 className="heading-lg text-foreground mb-4">De tjänster vi erbjuder inom tak</h2>
-          <p className="text-body max-w-3xl mx-auto">
-            Vi erbjuder flera olika tjänster inom tak. Så oavsett om du behöver ett helt nytt tak, 
-            en ommålning av ditt plåttak, modern taksäkerhet eller snöskottning av ditt tak, finns vi här för dig!
-          </p>
-        </motion.div>
+            <div className="section-container">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-16"
+                >
+                    <div className="slug-tag justify-center mb-4">
+                        <svg
+                            className="w-5 h-5"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
+                        </svg>
+                        VÅRA TJÄNSTER
+                    </div>
+                    <h2 className="heading-lg text-foreground mb-4">
+                        De tjänster vi erbjuder inom tak
+                    </h2>
+                    <p className="text-body max-w-3xl mx-auto text-left">
+                        Vi erbjuder flera olika tjänster inom tak. Så oavsett om
+                        du behöver ett helt nytt tak, en ommålning av ditt
+                        plåttak, modern taksäkerhet eller snöskottning av ditt
+                        tak, finns vi här för dig!
+                    </p>
+                </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <motion.a
-              key={service.title}
-              href={service.href}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="service-card group aspect-square"
-            >
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="service-card-overlay group-hover:from-black/95" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h4 className="text-xl font-semibold text-white mb-2">{service.title}</h4>
-                <p className="text-white/80 text-sm mb-4 line-clamp-2">{service.description}</p>
-                <span className="inline-flex items-center gap-2 text-white font-medium text-sm group-hover:text-primary transition-colors">
-                  Läs mer
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </span>
-              </div>
-            </motion.a>
-          ))}
-        </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {services.map((service, index) => (
+                        <motion.a
+                            key={service.title}
+                            href={service.href}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            className="service-card group aspect-square"
+                        >
+                            <img
+                                src={service.image}
+                                alt={service.title}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="service-card-overlay group-hover:from-black/95" />
+                            <h4 className="absolute bottom-0 left-0 right-0 p-6 text-xl font-semibold text-white transition-all duration-500 group-hover:-translate-y-28">
+                                {service.title}
+                            </h4>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 pointer-events-none group-hover:pointer-events-auto">
+                                <p className="text-white/80 line-clamp-2 mb-4 text-[20px]">
+                                    {service.description}
+                                </p>
+                                <span className="inline-flex items-center gap-2 text-white text-sm group-hover:text-primary transition-colors text-[20px] font-semibold">
+                                    Läs mer
+                                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                </span>
+                            </div>
+                        </motion.a>
+                    ))}
+                </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-12"
-        >
-          <a href="#tjanster" className="btn-primary">
-            Alla våra tjänster
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </motion.div>
-      </div>
-    </section>
-  );
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="text-center mt-12"
+                >
+                    <a href="#tjanster" className="btn-primary">
+                        Alla våra tjänster
+                        <ArrowRight className="w-4 h-4" />
+                    </a>
+                </motion.div>
+            </div>
+        </section>
+    );
 };
 
 export default Services;
