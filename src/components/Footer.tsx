@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import logo from "@/assets/img/logo.svg";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -32,11 +32,7 @@ const Footer = () => {
                     {/* Logo & Description */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center mb-6">
-                            <div className="bg-primary px-3 py-1.5 rounded">
-                                <span className="text-lg font-bold text-white tracking-wide">
-                                    DM<span className="mx-1">•</span>TAK
-                                </span>
-                            </div>
+                            <img src={logo} alt="Logo" width={300} />
                         </div>
                         <p className="text-background/70 text-sm leading-relaxed mb-6">
                             DM TAK är ett familjeföretag med över 20 års
@@ -120,7 +116,8 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-background/70 text-sm">
-                        © {currentYear} DM TAK. Alla rättigheter förbehållna.
+                        © {currentYear} MJ ELINSTALLATIONER. Alla rättigheter
+                        förbehållna.
                     </p>
                     <div className="flex items-center gap-6">
                         <a

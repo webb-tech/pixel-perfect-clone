@@ -3,17 +3,35 @@ import { motion } from "framer-motion";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import logo from "@/assets/img/logo.svg";
 
-const Header = () => {
+const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [scrollDirection, setScrollDirection] = useState("up");
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+
+            if (Math.abs(currentScrollY - lastScrollY) > 1) {
+                if (currentScrollY > lastScrollY) {
+                    setScrollDirection("down");
+                } else {
+                    setScrollDirection("up");
+                }
+                setLastScrollY(currentScrollY);
+            }
         };
+
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [lastScrollY]);
 
     const navLinks = [
         { name: "Våra tjänster", href: "#tjanster", hasDropdown: true },
@@ -27,15 +45,17 @@ const Header = () => {
     return (
         <motion.header
             initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
+            animate={{
+                y: lastScrollY < 50 ? 0 : scrollDirection === "down" ? -120 : 0,
+            }}
+            transition={{ duration: 0.3 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled
+                isScrolled || darkInitially
                     ? "bg-background/95 backdrop-blur-md shadow-lg"
                     : "bg-transparent"
             }`}
         >
-            <div className="max-w-[1600px] w-[90%] mx-auto">
+            <div className="max-w-[1400px] w-[90%] mx-auto">
                 <div className="flex items-center justify-between py-8">
                     {/* Left: Logo + Phone */}
                     <div className="flex items-center gap-8 relative">
@@ -48,7 +68,7 @@ const Header = () => {
                         <a
                             href="tel:08-6047445"
                             className={`hidden md:flex items-center gap-2 text-sm font-semibold transition-colors absolute -bottom-7 ${
-                                isScrolled
+                                isScrolled || darkInitially
                                     ? "text-transparent"
                                     : "text-primary-foreground"
                             }`}
@@ -65,7 +85,7 @@ const Header = () => {
                                 key={link.name}
                                 href={link.href}
                                 className={`nav-link text-sm font-semibold transition-colors ${
-                                    isScrolled
+                                    isScrolled || darkInitially
                                         ? "text-foreground/80 hover:text-foreground"
                                         : "text-primary-foreground/90 hover:text-primary-foreground"
                                 }`}
@@ -82,7 +102,7 @@ const Header = () => {
                             <a
                                 href="#kontakt"
                                 className={`hidden lg:inline-flex btn-primary text-sm py-2 px-4 ${
-                                    isScrolled
+                                    isScrolled || darkInitially
                                         ? ""
                                         : "bg-white/20 backdrop-blur-sm hover:bg-muted-foreground"
                                 }`}
@@ -96,7 +116,7 @@ const Header = () => {
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className={`p-2 transition-colors xl:hidden ${
-                            isScrolled
+                            isScrolled || darkInitially
                                 ? "text-foreground"
                                 : "text-primary-foreground"
                         }`}

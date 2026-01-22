@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-background">
+        <>
             <Header />
             <Hero />
             <Services />
@@ -20,7 +20,7 @@ const Home = () => {
             <Careers />
             <CTA />
             <Footer />
-        </div>
+        </>
     );
 };
 
