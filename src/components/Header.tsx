@@ -55,26 +55,13 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
                     : "bg-transparent"
             }`}
         >
-            <div className="max-w-[1400px] w-[90%] mx-auto">
+            <div className="section-container">
                 <div className="flex items-center justify-between py-8">
                     {/* Left: Logo + Phone */}
                     <div className="flex items-center gap-8 relative">
                         {/* Logo */}
                         <a href="/" className="flex items-center">
                             <img src={logo} alt="Logo" width={300} />
-                        </a>
-
-                        {/* Phone */}
-                        <a
-                            href="tel:08-6047445"
-                            className={`hidden md:flex items-center gap-2 text-sm font-semibold transition-colors absolute -bottom-7 ${
-                                isScrolled || darkInitially
-                                    ? "text-transparent"
-                                    : "text-primary-foreground"
-                            }`}
-                        >
-                            <Phone className="w-4 h-4" />
-                            <span className="underline">08 – 604 74 45</span>
                         </a>
                     </div>
 

@@ -24,7 +24,7 @@ const Hero = () => {
                 }}
             />
 
-            <div className="section-container relative z-10 py-32 px-6 lg:py-48">
+            <div className="section-container relative z-10 py-32 lg:py-48">
                 <div>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
