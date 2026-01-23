@@ -13,6 +13,8 @@ import News from "@/pages/News";
 import NewsArticel from "@/pages/NewsArticel";
 import References from "@/pages/References";
 import Reference from "@/pages/Reference";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
                             path="/referenser/:slug"
                             element={<Reference />}
                         />
+                        <Route path="/om-oss" element={<About />} />
+                        <Route path="/kontakt" element={<Contact />} />
                     </Route>
                     <Route element={<DefaultLayout />}>
                         <Route path="/nyheter" element={<News />} />

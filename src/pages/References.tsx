@@ -24,7 +24,7 @@ const References = () => {
 
             <section className="py-16">
                 <div className="section-container">
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                         {references.map((ref, i) => (
                             <ReferenceCard
                                 key={i}

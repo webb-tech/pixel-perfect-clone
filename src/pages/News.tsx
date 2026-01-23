@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { NewsCard } from "@/components/NewsCard";
 import news from "@/content/news.json";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CTA } from "@/components/CTA";
 
 const News = () => {
@@ -70,83 +71,16 @@ const News = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         {paginatedNews.map((item, i) => (
-                            <a href={`/nyheter/${item.slug}`} key={i}>
-                                <div
-                                    className="p-3 bg-white flex flex-col gap-2 rounded-lg transition-shadow duration-300 hover:shadow-lg"
-                                    style={{
-                                        boxShadow:
-                                            "0px 4px 10px rgba(0, 0, 0, 0.15)",
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.boxShadow =
-                                            "0px 12px 30px rgba(0, 0, 0, 0.25)";
-                                        const overlay =
-                                            e.currentTarget.querySelector(
-                                                "[data-overlay]",
-                                            ) as HTMLElement;
-                                        const arrow =
-                                            e.currentTarget.querySelector(
-                                                "[data-arrow]",
-                                            ) as HTMLElement;
-                                        if (overlay)
-                                            overlay.style.opacity = "0.5";
-                                        if (arrow) arrow.style.opacity = "1";
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.boxShadow =
-                                            "0px 8px 24px rgba(0, 0, 0, 0.2)";
-                                        const overlay =
-                                            e.currentTarget.querySelector(
-                                                "[data-overlay]",
-                                            ) as HTMLElement;
-                                        const arrow =
-                                            e.currentTarget.querySelector(
-                                                "[data-arrow]",
-                                            ) as HTMLElement;
-                                        if (overlay)
-                                            overlay.style.opacity = "0";
-                                        if (arrow) arrow.style.opacity = "0";
-                                    }}
-                                >
-                                    <div
-                                        className="rounded-sm relative"
-                                        style={{
-                                            height: "220px",
-                                            backgroundImage: `url(${item.thumbnailImg})`,
-                                            backgroundPosition: "center",
-                                            backgroundSize: "cover",
-                                        }}
-                                    >
-                                        <div
-                                            data-overlay
-                                            className="absolute inset-0 rounded-sm bg-black transition-opacity duration-300"
-                                            style={{ opacity: "0" }}
-                                        ></div>
-                                        <div
-                                            data-arrow
-                                            className="absolute inset-0 rounded-sm flex items-center justify-center transition-opacity duration-300"
-                                            style={{ opacity: "0" }}
-                                        >
-                                            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                                                <ArrowRight className="w-6 h-6 text-primary" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="p-4 space-y-2">
-                                        <span className="text-sm font-medium">
-                                            {item.date}
-                                        </span>
-
-                                        <h2 className="text-lg font-bold">
-                                            {item.title}
-                                        </h2>
-
-                                        <p>{item.excerpt}</p>
-                                    </div>
-                                </div>
-                            </a>
+                            <NewsCard
+                                key={i}
+                                slug={item.slug}
+                                thumbnailImg={item.thumbnailImg}
+                                date={item.date}
+                                title={item.title}
+                                excerpt={item.excerpt}
+                            />
                         ))}
                     </div>
 

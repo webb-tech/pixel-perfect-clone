@@ -10,6 +10,9 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
     const [scrollDirection, setScrollDirection] = useState("up");
     const [lastScrollY, setLastScrollY] = useState(0);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+    const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(
+        null,
+    );
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,7 +41,7 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
     const navLinks = [
         {
             name: "Våra tjänster",
-            href: "/tjanster",
+            href: "",
             hasDropdown: true,
             items: [
                 ...servicePages.map((page) => ({
@@ -56,8 +59,7 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
             href: "#jobb",
         },
         { name: "Referenser", href: "/referenser", hasDropdown: false },
-        { name: "Om oss", href: "#om-oss", hasDropdown: false },
-        { name: "Begär en offert", href: "#kontakt", hasDropdown: false },
+        { name: "Om oss", href: "/om-oss", hasDropdown: false },
     ];
 
     return (
@@ -73,7 +75,7 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
             } ${isScrolled ? "shadow-lg" : ""}`}
         >
             <div className="section-container">
-                <div className="flex items-center justify-between py-8">
+                <div className="flex items-center justify-between gap-4 py-8">
                     {/* Left: Logo + Phone */}
                     <div className="flex items-center gap-8 relative">
                         {/* Logo */}
@@ -96,7 +98,7 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
                             >
                                 <a
                                     href={link.href}
-                                    className={`nav-link text-sm font-semibold transition-colors flex items-center gap-2 ${
+                                    className={`nav-link text-sm font-semibold transition-colors flex items-center gap-1 ${
                                         isScrolled || darkInitially
                                             ? "text-foreground/80 hover:text-foreground"
                                             : "text-primary-foreground/90 hover:text-primary-foreground"
@@ -149,7 +151,7 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
                         {/* CTA Button + Hamburger */}
                         <div className="flex items-center gap-4">
                             <a
-                                href="#kontakt"
+                                href="/kontakt"
                                 className={`hidden lg:inline-flex btn-primary text-sm py-2 px-4 ${
                                     isScrolled || darkInitially
                                         ? ""
@@ -197,17 +199,70 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
                             <span className="underline">08 – 604 74 45</span>
                         </a>
                         {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className="nav-link text-base py-2 text-foreground"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                {link.name}
-                                {link.hasDropdown && (
-                                    <ChevronDown className="w-4 h-4" />
-                                )}
-                            </a>
+                            <div key={link.name}>
+                                <button
+                                    onClick={() => {
+                                        if (link.hasDropdown) {
+                                            setMobileOpenDropdown(
+                                                mobileOpenDropdown === link.name
+                                                    ? null
+                                                    : link.name,
+                                            );
+                                        } else {
+                                            setIsMobileMenuOpen(false);
+                                            window.location.href = link.href;
+                                        }
+                                    }}
+                                    className="w-full text-left nav-link text-base py-2 text-foreground flex items-center justify-between"
+                                >
+                                    {link.name}
+                                    {link.hasDropdown && (
+                                        <ChevronDown
+                                            className={`w-4 h-4 transition-transform ${
+                                                mobileOpenDropdown === link.name
+                                                    ? "rotate-180"
+                                                    : ""
+                                            }`}
+                                        />
+                                    )}
+                                </button>
+                                {link.hasDropdown &&
+                                    mobileOpenDropdown === link.name &&
+                                    "items" in link && (
+                                        <motion.div
+                                            initial={{ opacity: 0, height: 0 }}
+                                            animate={{
+                                                opacity: 1,
+                                                height: "auto",
+                                            }}
+                                            exit={{ opacity: 0, height: 0 }}
+                                            className="flex flex-col gap-2 ml-4 mt-2 pl-4 border-l border-border"
+                                        >
+                                            {link.items?.map(
+                                                (item: {
+                                                    label: string;
+                                                    href: string;
+                                                }) => (
+                                                    <a
+                                                        key={item.label}
+                                                        href={item.href}
+                                                        className="text-sm text-foreground/80 hover:text-foreground transition-colors py-2"
+                                                        onClick={() => {
+                                                            setIsMobileMenuOpen(
+                                                                false,
+                                                            );
+                                                            setMobileOpenDropdown(
+                                                                null,
+                                                            );
+                                                        }}
+                                                    >
+                                                        {item.label}
+                                                    </a>
+                                                ),
+                                            )}
+                                        </motion.div>
+                                    )}
+                            </div>
                         ))}
                         <a
                             href="#kontakt"
