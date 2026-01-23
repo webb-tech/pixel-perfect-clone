@@ -27,7 +27,7 @@ const services = [
         title: "Smarta hem",
         description:
             "Taksäkerhet innebär att kunna beträda och arbeta på taket med hjälp av taksäkerhetsanordningar.",
-        image: "https://images.unsplash.com/photo-1541123603104-512919d6a96c?w=720&h=720&fit=crop",
+        image: "",
         href: "#",
     },
     {
@@ -48,7 +48,7 @@ const services = [
         title: "Ugn/spishäll",
         description:
             "Var ute i god tid med snöskottning innan skador uppstår på tak och omgivning.",
-        image: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=720&h=720&fit=crop",
+        image: "",
         href: "#",
     },
 ];
@@ -81,7 +81,7 @@ const Services = () => {
                         VÅRA TJÄNSTER
                     </div>
                     <h2 className="heading-lg text-foreground mb-4">
-                        De tjänster vi erbjuder inom tak
+                        De tjänster vi erbjuder
                     </h2>
                     <p className="text-body max-w-3xl mx-auto text-left">
                         Vi erbjuder flera olika tjänster inom tak. Så oavsett om
@@ -106,7 +106,7 @@ const Services = () => {
                                 alt={service.title}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            <div className="service-card-overlay group-hover:from-black/95" />
+                            <div className="service-card-overlay" />
                             <h4 className="absolute bottom-0 left-0 right-0 p-6 text-xl font-semibold text-white transition-all duration-500 group-hover:-translate-y-28">
                                 {service.title}
                             </h4>

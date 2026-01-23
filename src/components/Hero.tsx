@@ -32,19 +32,11 @@ const Hero = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h1 className="heading-xl text-white mb-4">
-                            Takläggning i<br />
-                            Stockholm
+                            We make the
+                            <br />
+                            future brighter
                         </h1>
                     </motion.div>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-lg md:text-xl text-white/90 mb-6"
-                    >
-                        –Specialiserade på BRFer
-                    </motion.p>
 
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
@@ -52,11 +44,9 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-white text-base md:text-lg leading-relaxed mb-8 max-w-lg"
                     >
-                        DM TAK är i grund och botten ett familjeföretag där
-                        kunskap om takläggning gått i arv i tre generationer. Vi
-                        är experter på takläggning i Stockholm och är alltid
-                        inriktade på att utföra ett arbete som bygger på
-                        yrkesstolthet och god känsla för våra kunders behov.
+                        Vi är en helhetsleverantör när det kommer till allt som
+                        har med el att göra. Från lampor i ditt hem till
+                        solcellsanläggning på ditt tak.
                     </motion.p>
 
                     <motion.div
@@ -65,13 +55,13 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="flex flex-wrap items-center gap-4"
                     >
-                        <a href="#kontakt" className="btn-primary">
+                        <a href="#kontakt" className="btn-primary-hero">
                             Kontakta oss
                             <ArrowRight className="w-4 h-4" />
                         </a>
                         <a
                             href="#tjanster"
-                            className="btn-secondary text-white hover:text-primary"
+                            className="btn-secondary-hero text-white hover:text-primary"
                         >
                             Våra tjänster
                             <ArrowRight className="w-4 h-4" />
@@ -86,7 +76,7 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1, duration: 0.3 }}
-                className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors"
+                className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg transition-colors"
             >
                 <svg
                     className="w-6 h-6 text-white"

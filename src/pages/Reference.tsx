@@ -1,0 +1,48 @@
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import references from "@/content/references.json";
+import { useParams } from "react-router-dom";
+import NotFound from "./NotFound";
+
+const Reference = () => {
+    const { slug } = useParams();
+    const referenceContent = references.find((item) => item.slug === slug);
+
+    if (!referenceContent) {
+        return <NotFound />;
+    }
+
+    return (
+        <>
+            <section
+                className="pt-52 pb-16 text-white"
+                style={{
+                    backgroundImage: `url(${referenceContent.img})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundColor: "rgba(0, 0, 0, 0.75)",
+                    backgroundBlendMode: "multiply",
+                }}
+            >
+                <div className="section-container flex flex-col items-center space-y-4">
+                    <Breadcrumbs
+                        currentPage={referenceContent.title}
+                        links={[
+                            { label: "Start", href: "/" },
+                            { label: "Våra referenser", href: "/referenser" },
+                        ]}
+                    />
+
+                    <h1 className="heading-lg">{referenceContent.title}</h1>
+                </div>
+            </section>
+
+            <section className="pt-8 pb-16">
+                <div className="section-container">
+                    <article>{referenceContent.description}</article>
+                </div>
+            </section>
+        </>
+    );
+};
+
+export default Reference;

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import ReferenceCard from "./ReferenceCard";
 
 import gymImg from "@/assets/img/gym.jpg";
 import byggeImg from "@/assets/img/bygge.jpg";
@@ -13,7 +14,6 @@ const references = [
         description:
             "I den här videon möter du Johan Ingberg, ordförande för BRF Ånghästen på Södermalm i Stockholm. Johan berättar om föreningens upplevelse av DM TAK och den takomläggning som...",
         image: gymImg,
-        overlayText: "Ordföranden berättar SÅ NÖJDA!",
     },
     {
         id: 2,
@@ -21,7 +21,6 @@ const references = [
         description:
             "Ordförande Bengt Jansson och boende på Bostadsrättsföreningen Menglöd 2, berättar själva om en mycket lyckad upphandling och genomförande av en stor...",
         image: byggeImg,
-        overlayText: "BOSTADSRÄTTSFÖRENINGEN MENGLÖD",
     },
 ];
 
@@ -64,40 +63,12 @@ const References = () => {
 
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                     {references.map((item, index) => (
-                        <motion.div
+                        <ReferenceCard
                             key={item.id}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{
-                                duration: 0.6,
-                                delay: 0.2 + index * 0.1,
-                            }}
-                            className="bg-white rounded-lg overflow-hidden shadow-lg"
-                        >
-                            <div className="relative aspect-video w-full h-56">
-                                <img
-                                    src={item.image}
-                                    alt={item.title}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/30" />
-                            </div>
-                            <div className="p-8">
-                                <h3 className="text-foreground font-bold text-lg mb-3">
-                                    {item.title}
-                                </h3>
-                                <p className="text-muted-foreground text-sm mb-4">
-                                    {item.description}
-                                </p>
-                                <a
-                                    href="#"
-                                    className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
-                                >
-                                    Läs mer
-                                    <ArrowRight className="w-4 h-4" />
-                                </a>
-                            </div>
-                        </motion.div>
+                            {...item}
+                            index={index}
+                            isInView={isInView}
+                        />
                     ))}
                 </div>
 

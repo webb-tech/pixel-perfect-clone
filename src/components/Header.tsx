@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import logo from "@/assets/img/logo.svg";
+import servicePages from "@/content/service-pages.json";
 
 const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [scrollDirection, setScrollDirection] = useState("up");
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,26 +36,41 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
     }, [lastScrollY]);
 
     const navLinks = [
-        { name: "Våra tjänster", href: "#tjanster", hasDropdown: true },
-        { name: "Nyheter", href: "#nyheter", hasDropdown: true },
-        { name: "Jobba hos oss", href: "#jobb", hasDropdown: true },
-        { name: "Referenser", href: "#referenser", hasDropdown: false },
+        {
+            name: "Våra tjänster",
+            href: "/tjanster",
+            hasDropdown: true,
+            items: [
+                ...servicePages.map((page) => ({
+                    label: page.title,
+                    href: `/tjanster/${page.slug}`,
+                })),
+            ],
+        },
+        {
+            name: "Nyheter",
+            href: "/nyheter",
+        },
+        {
+            name: "Jobba hos oss",
+            href: "#jobb",
+        },
+        { name: "Referenser", href: "/referenser", hasDropdown: false },
         { name: "Om oss", href: "#om-oss", hasDropdown: false },
         { name: "Begär en offert", href: "#kontakt", hasDropdown: false },
     ];
 
     return (
         <motion.header
-            initial={{ y: -100 }}
             animate={{
                 y: lastScrollY < 50 ? 0 : scrollDirection === "down" ? -120 : 0,
             }}
             transition={{ duration: 0.3 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                 isScrolled || darkInitially
-                    ? "bg-background/95 backdrop-blur-md shadow-lg"
+                    ? "bg-background/95 backdrop-blur-md"
                     : "bg-transparent"
-            }`}
+            } ${isScrolled ? "shadow-lg" : ""}`}
         >
             <div className="section-container">
                 <div className="flex items-center justify-between py-8">
@@ -68,20 +85,65 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
                     {/* Desktop Navigation */}
                     <nav className="hidden xl:flex items-center gap-6">
                         {navLinks.map((link) => (
-                            <a
+                            <div
                                 key={link.name}
-                                href={link.href}
-                                className={`nav-link text-sm font-semibold transition-colors ${
-                                    isScrolled || darkInitially
-                                        ? "text-foreground/80 hover:text-foreground"
-                                        : "text-primary-foreground/90 hover:text-primary-foreground"
-                                }`}
+                                className="relative group"
+                                onMouseEnter={() =>
+                                    link.hasDropdown &&
+                                    setOpenDropdown(link.name)
+                                }
+                                onMouseLeave={() => setOpenDropdown(null)}
                             >
-                                {link.name}
-                                {link.hasDropdown && (
-                                    <ChevronDown className="w-4 h-4" />
-                                )}
-                            </a>
+                                <a
+                                    href={link.href}
+                                    className={`nav-link text-sm font-semibold transition-colors flex items-center gap-2 ${
+                                        isScrolled || darkInitially
+                                            ? "text-foreground/80 hover:text-foreground"
+                                            : "text-primary-foreground/90 hover:text-primary-foreground"
+                                    }`}
+                                >
+                                    {link.name}
+                                    {link.hasDropdown && (
+                                        <ChevronDown
+                                            className={`w-4 h-4 transition-transform ${openDropdown === link.name ? "rotate-180" : ""}`}
+                                        />
+                                    )}
+                                </a>
+
+                                {link.hasDropdown &&
+                                    openDropdown === link.name &&
+                                    "items" in link && (
+                                        <div className="absolute top-full left-0 mt-0 w-48">
+                                            <div className="h-2 bg-transparent pointer-events-auto"></div>
+                                            <motion.div
+                                                initial={{ opacity: 0, y: -10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: -10 }}
+                                                className="absolute top-2 left-0 w-48 bg-background border border-border rounded-lg shadow-lg p-2 pointer-events-auto"
+                                            >
+                                                {link.items?.map(
+                                                    (item: {
+                                                        label: string;
+                                                        href: string;
+                                                    }) => (
+                                                        <a
+                                                            key={item.label}
+                                                            href={item.href}
+                                                            className="block px-4 py-2 text-sm text-foreground hover:bg-neutral-100 hover:text-primary transition-colors rounded-sm"
+                                                            onClick={() => {
+                                                                setOpenDropdown(
+                                                                    null,
+                                                                );
+                                                            }}
+                                                        >
+                                                            {item.label}
+                                                        </a>
+                                                    ),
+                                                )}
+                                            </motion.div>
+                                        </div>
+                                    )}
+                            </div>
                         ))}
 
                         {/* CTA Button + Hamburger */}

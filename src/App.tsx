@@ -3,10 +3,16 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "@/pages/Home";
-import NotFound from "./pages/NotFound";
 import HomepageLayout from "./layouts/HomepageLayout";
 import DefaultLayout from "./layouts/DefaultLayout";
+
+import Home from "@/pages/Home";
+import NotFound from "@/pages/NotFound";
+import Service from "@/pages/Service";
+import News from "@/pages/News";
+import NewsArticel from "@/pages/NewsArticel";
+import References from "@/pages/References";
+import Reference from "@/pages/Reference";
 
 const queryClient = new QueryClient();
 
@@ -19,9 +25,19 @@ const App = () => (
                 <Routes>
                     <Route element={<HomepageLayout />}>
                         <Route path="/" element={<Home />} />
+                        <Route path="/tjanster/:slug" element={<Service />} />
+                        <Route
+                            path="/referenser/:slug"
+                            element={<Reference />}
+                        />
                     </Route>
                     <Route element={<DefaultLayout />}>
-                        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                        <Route path="/nyheter" element={<News />} />
+                        <Route
+                            path="/nyheter/:slug"
+                            element={<NewsArticel />}
+                        />
+                        <Route path="/referenser" element={<References />} />
                         <Route path="*" element={<NotFound />} />
                     </Route>
                 </Routes>
