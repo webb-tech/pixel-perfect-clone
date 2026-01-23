@@ -1,5 +1,4 @@
 import { MailIcon, Phone, Pin } from "lucide-react";
-import { ContactForm } from "@/components/ContactForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const Contact = () => {
