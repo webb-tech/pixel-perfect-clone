@@ -38,7 +38,7 @@ const Video = () => {
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6 }}
                     >
-                        <AspectRatio ratio={4 / 3}>
+                        <AspectRatio ratio={16 / 9}>
                             <video
                                 className="w-full h-full object-cover rounded-lg"
                                 controls

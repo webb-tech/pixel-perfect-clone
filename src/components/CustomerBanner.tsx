@@ -16,19 +16,23 @@ export default function CustomerBanner() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section ref={ref} className="py-8 lg:py-16 section-beige">
+        <section
+            ref={ref}
+            className="py-4
+         bg-primary"
+        >
             <div className="section-container">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 0.6 }}
-                    className="relative w-full overflow-hidden"
+                    className="relative w-full "
                 >
                     <motion.div
                         className="flex gap-8 lg:gap-16"
                         animate={{ x: [0, -2000] }}
                         transition={{
-                            duration: 60,
+                            duration: 45,
                             repeat: Infinity,
                             ease: "linear",
                         }}
