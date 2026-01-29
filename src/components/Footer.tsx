@@ -1,4 +1,4 @@
-import logo from "@/assets/img/logo.svg";
+import logo from "@/assets/img/logo.png";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -32,7 +32,7 @@ const Footer = () => {
                     {/* Logo & Description */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center mb-6">
-                            <img src={logo} alt="Logo" width={300} />
+                            <img src={logo} alt="Logo" width={100} />
                         </div>
                         <p className="text-background/70 text-sm leading-relaxed mb-6">
                             DM TAK är ett familjeföretag med över 20 års

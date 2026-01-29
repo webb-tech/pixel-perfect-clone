@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
-import logo from "@/assets/img/logo.svg";
+import logo from "@/assets/img/logo.png";
 import servicePages from "@/content/service-pages.json";
 
 const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
@@ -75,12 +75,12 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
             } ${isScrolled ? "shadow-lg" : ""}`}
         >
             <div className="section-container">
-                <div className="flex items-center justify-between gap-4 py-8">
+                <div className="flex items-center justify-between gap-4 py-6">
                     {/* Left: Logo + Phone */}
                     <div className="flex items-center gap-8 relative">
                         {/* Logo */}
                         <a href="/" className="flex items-center">
-                            <img src={logo} alt="Logo" width={300} />
+                            <img src={logo} alt="Logo" width={120} />
                         </a>
                     </div>
 

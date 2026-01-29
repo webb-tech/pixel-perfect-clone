@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero";
 import References from "@/components/References";
+import Video from "@/components/video";
+import CustomerBanner from "@/components/CustomerBanner";
 import Services from "@/components/Services";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -10,7 +12,8 @@ const Home = () => {
     return (
         <>
             <Hero />
-            <Services />
+            <CustomerBanner />
+            <Video />
             <Contact />
             <References />
             <FAQ />
