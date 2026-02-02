@@ -13,13 +13,13 @@ const testimonials = [
     {
         id: 1,
         location: "BRF Ånghästen",
-        description: "Takbyte utfört av DM TAK",
+        description: "Elinstallation utfört av MJ Elinstallationer",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=720&h=480&fit=crop",
     },
     {
         id: 2,
         location: "BRF Menglod",
-        description: "Komplett takläggning",
+        description: "Komplett elinstallation",
         image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=720&h=480&fit=crop",
     },
 ];
@@ -35,7 +35,7 @@ const Testimonials = () => {
 
     const prevSlide = () => {
         setCurrentIndex(
-            (prev) => (prev - 1 + testimonials.length) % testimonials.length,
+            (prev) => (prev - 1 + testimonials.length) % testimonials.length
         );
     };
 
@@ -72,7 +72,7 @@ const Testimonials = () => {
                         <div className="rounded-lg overflow-hidden">
                             <img
                                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop"
-                                alt="DM TAK team"
+                                alt="MJ Elinstallationer team"
                                 className="w-full spect-4/3 object-cover"
                             />
                         </div>
@@ -143,7 +143,8 @@ const Testimonials = () => {
 
                         {/* Quote */}
                         <blockquote className="text-xl md:text-2xl font-bold text-foreground leading-tight">
-                            "Det finns inget som DM TAK kunde ha gjort bättre"
+                            "Det finns inget som MJ Elinstallationer kunde ha
+                            gjort bättre"
                         </blockquote>
 
                         <p className="text-muted-foreground">
@@ -154,13 +155,13 @@ const Testimonials = () => {
                         <p className="text-muted-foreground leading-relaxed">
                             Johan beskriver samarbetet som smidigt och
                             professionellt och säger att han inte har några som
-                            helst problem att rekommendera DM TAK till andra
-                            bostadsrättsföreningar.
+                            helst problem att rekommendera MJ Elinstallationer
+                            till andra bostadsrättsföreningar.
                         </p>
 
                         <p className="text-foreground">
-                            Han kan inte komma på något som DM TAK kunde gjort
-                            bättre!
+                            Han kan inte komma på något som MJ Elinstallationer
+                            kunde gjort bättre!
                         </p>
 
                         <div className="flex justify-center">
@@ -193,7 +194,7 @@ const Testimonials = () => {
                             <div className="grid grid-cols-2 gap-4 mb-4">
                                 <div className="border border-border rounded-lg p-3">
                                     <p className="font-semibold text-foreground text-sm">
-                                        DM TAK
+                                        MJ Elinstallationer
                                     </p>
                                     <div className="flex gap-0.5 my-1">
                                         {[...Array(5)].map((_, i) => (
@@ -204,8 +205,9 @@ const Testimonials = () => {
                                         ))}
                                     </div>
                                     <p className="text-xs text-muted-foreground line-clamp-2">
-                                        Bra bemött av DM TAK. Arbetet blev
-                                        försenat p.g. av personalproblem men ...
+                                        Bra bemött av MJ Elinstallationer.
+                                        Arbetet blev försenat p.g. av
+                                        personalproblem men ...
                                     </p>
                                     <p className="text-xs text-muted-foreground mt-2">
                                         Ivar E · 2 veckor
@@ -213,7 +215,7 @@ const Testimonials = () => {
                                 </div>
                                 <div className="border border-border rounded-lg p-3">
                                     <p className="font-semibold text-foreground text-sm">
-                                        DM TAK
+                                        MJ Elinstallationer
                                     </p>
                                     <div className="flex gap-0.5 my-1">
                                         {[...Array(5)].map((_, i) => (

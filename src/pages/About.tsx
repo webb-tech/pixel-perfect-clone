@@ -50,10 +50,10 @@ const About = () => {
                         och att med vårt eget beteende och hantverk visa vägen:
                         Om man är ärlig och stolt över sitt hantverk kan man
                         alltid gå med ryggen rak. I en bransch som ofta kantas
-                        av oseriösa aktörer tar DM TAK uppgiften på allvar. Vårt
-                        mål är att alltid leverera ett tak av högsta kvalitet
-                        genom tydliga rutiner, eﬀektiviserat arbetsflöde och
-                        genomgående yrkesstolthet.
+                        av oseriösa aktörer tar MJ Elinstallationer uppgiften på
+                        allvar. Vårt mål är att alltid leverera ett tak av
+                        högsta kvalitet genom tydliga rutiner, eﬀektiviserat
+                        arbetsflöde och genomgående yrkesstolthet.
                     </p>
                 </div>
 
@@ -93,7 +93,7 @@ const About = () => {
                             .sort(
                                 (a, b) =>
                                     new Date(b.date).getTime() -
-                                    new Date(a.date).getTime(),
+                                    new Date(a.date).getTime()
                             )
                             .slice(0, 3)
                             .map((item, i) => (

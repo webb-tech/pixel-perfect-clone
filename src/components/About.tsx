@@ -17,7 +17,9 @@ const About = () => {
                     className="text-center mb-8"
                 >
                     <span className="text-accent">Om oss</span>
-                    <h2 className="heading-lg text-foreground">Vi är DM TAK</h2>
+                    <h2 className="heading-lg text-foreground">
+                        Vi är MJ Elinstallationer
+                    </h2>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-8">
@@ -39,11 +41,12 @@ const About = () => {
 
                         <div className="space-y-4 text-muted-foreground leading-relaxed">
                             <p>
-                                Vi är DM TAK – takläggare i hela storstockholm
-                                som arbetar med att byta tak i form av
-                                tegelpannor, betong och plåttak. Vi tar oss an
-                                stora som små projekt åt både företag,
-                                bostadsrättsföreningar samt fastighetsägare.
+                                Vi är MJ Elinstallationer – elinstallation i
+                                hela storstockholm som arbetar med att byta tak
+                                i form av tegelpannor, betong och plåttak. Vi
+                                tar oss an stora som små projekt åt både
+                                företag, bostadsrättsföreningar samt
+                                fastighetsägare.
                             </p>
 
                             <p>
@@ -70,15 +73,16 @@ const About = () => {
                                 utvecklingen går snabbt framåt. Vi är därför
                                 noga med att vidareutbilda våra takläggare. Det
                                 är en av anledningarna till att vårt arbete har
-                                uppmärksammats: DM TAK utsågs till Årets
-                                Hantverkare 2016 i kategorin Större Byggföretag.
+                                uppmärksammats: MJ Elinstallationer utsågs till
+                                Årets Hantverkare 2016 i kategorin Större
+                                Byggföretag.
                             </p>
 
                             <p>
                                 Att ha ett tryggt och tätt tak ovanför huvudet
-                                är viktigt. På DM TAK tar vi oss an den
-                                uppgiften varje dag, för det som är viktigt för
-                                er är också viktigt för oss.
+                                är viktigt. På MJ Elinstallationer tar vi oss an
+                                den uppgiften varje dag, för det som är viktigt
+                                för er är också viktigt för oss.
                             </p>
                         </div>
 
@@ -98,7 +102,7 @@ const About = () => {
                         </ul>
 
                         <a href="#om-oss" className="btn-primary inline-flex">
-                            Lär känna DM TAK
+                            Lär känna MJ Elinstallationer
                             <ArrowRight className="w-4 h-4" />
                         </a>
                     </motion.div>
@@ -113,14 +117,14 @@ const About = () => {
                         <div className="overflow-hidden rounded-2xl shadow-xl">
                             <img
                                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop"
-                                alt="DM TAK takläggare"
+                                alt="MJ Elinstallationer elinstallation"
                                 className="w-full h-full object-cover"
                             />
                         </div>
                         <div className="overflow-hidden rounded-2xl shadow-xl">
                             <img
                                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
-                                alt="DM TAK team"
+                                alt="MJ Elinstallationer team"
                                 className="w-full h-full object-cover"
                             />
                         </div>

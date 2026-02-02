@@ -26,7 +26,7 @@ const MediaSection = () => {
                     className="text-center mb-12"
                 >
                     <h2 className="heading-lg text-foreground mb-4">
-                        DM TAK i media
+                        MJ Elinstallationer i media
                     </h2>
                     <p className="text-body">
                         Vi har blivit uppmärksammade av flera branschledande

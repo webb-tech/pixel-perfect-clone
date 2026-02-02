@@ -20,7 +20,7 @@ const News = () => {
     const startIndex = (currentPage - 1) * postsPerPage;
     const paginatedNews = sortedNews.slice(
         startIndex,
-        startIndex + postsPerPage,
+        startIndex + postsPerPage
     );
 
     return (
@@ -36,8 +36,8 @@ const News = () => {
 
                     <p className="max-w-3xl">
                         Följ med oss i vår vardag! Här hittar du de senaste
-                        nyheterna från DM TAK. Du kan också läsa intressanta
-                        artiklar med matnyttig information.
+                        nyheterna från MJ Elinstallationer. Du kan också läsa
+                        intressanta artiklar med matnyttig information.
                     </p>
                 </div>
             </section>
@@ -89,7 +89,7 @@ const News = () => {
                             <button
                                 onClick={() =>
                                     setCurrentPage((prev) =>
-                                        Math.max(1, prev - 1),
+                                        Math.max(1, prev - 1)
                                     )
                                 }
                                 disabled={currentPage === 1}
@@ -115,14 +115,14 @@ const News = () => {
                                         >
                                             {i + 1}
                                         </button>
-                                    ),
+                                    )
                                 )}
                             </div>
 
                             <button
                                 onClick={() =>
                                     setCurrentPage((prev) =>
-                                        Math.min(totalPages, prev + 1),
+                                        Math.min(totalPages, prev + 1)
                                     )
                                 }
                                 disabled={currentPage === totalPages}

@@ -12,7 +12,7 @@ const references = [
         id: 1,
         title: "Kundberättelse: Ett tryggt och professionellt takbyte",
         description:
-            "I den här videon möter du Johan Ingberg, ordförande för BRF Ånghästen på Södermalm i Stockholm. Johan berättar om föreningens upplevelse av DM TAK och den takomläggning som...",
+            "I den här videon möter du Johan Ingberg, ordförande för BRF Ånghästen på Södermalm i Stockholm. Johan berättar om föreningens upplevelse av MJ Elinstallationer och den elinstallation som...",
         image: gymImg,
     },
     {

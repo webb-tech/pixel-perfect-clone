@@ -35,9 +35,9 @@ const Footer = () => {
                             <img src={logo} alt="Logo" width={100} />
                         </div>
                         <p className="text-background/70 text-sm leading-relaxed mb-6">
-                            DM TAK är ett familjeföretag med över 20 års
-                            erfarenhet av takläggning i Stockholm. Vi erbjuder
-                            kvalitetsarbete med 15 års garanti.
+                            MJ Elinstallationer är ett familjeföretag med över
+                            20 års erfarenhet av elinstallation i Stockholm. Vi
+                            erbjuder kvalitetsarbete med 15 års garanti.
                         </p>
                         <div className="flex items-center gap-1">
                             {[...Array(5)].map((_, i) => (
@@ -50,7 +50,7 @@ const Footer = () => {
                                 </svg>
                             ))}
                             <span className="text-background/70 text-sm ml-2">
-                                600+ omdömen
+                                100+ omdömen
                             </span>
                         </div>
                     </div>
