@@ -38,7 +38,7 @@ export default function CustomerBanner() {
                         const firstRect = firstLogo.getBoundingClientRect();
                         const seventhRect = seventhLogo.getBoundingClientRect();
                         const width = Math.round(
-                            seventhRect.left - firstRect.left
+                            seventhRect.left - firstRect.left,
                         );
 
                         if (width > 0) {
@@ -56,7 +56,7 @@ export default function CustomerBanner() {
                             }
                         }
                         const gap = window.getComputedStyle(
-                            trackRef.current
+                            trackRef.current,
                         ).gap;
                         const gapValue = parseInt(gap) || 32;
                         width += gapValue * (logos.length - 1);
@@ -100,7 +100,7 @@ export default function CustomerBanner() {
                                     measure();
                                 }
                             },
-                            { once: true }
+                            { once: true },
                         );
                     }
                 });
@@ -120,7 +120,7 @@ export default function CustomerBanner() {
         if (cycleWidth > 0) {
             const styleId = "seamless-scroll-animation";
             let styleElement = document.getElementById(
-                styleId
+                styleId,
             ) as HTMLStyleElement;
 
             if (!styleElement) {
@@ -151,45 +151,43 @@ export default function CustomerBanner() {
 
     return (
         <section ref={ref} className="bg-primary">
-            <div className="section-container">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ duration: 0.6 }}
-                    className="relative w-full"
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.6 }}
+                className="relative w-full"
+            >
+                <div
+                    ref={trackRef}
+                    className="flex gap-8 lg:gap-16"
+                    style={{
+                        width: "max-content",
+                        animation:
+                            cycleWidth > 0 && isInView
+                                ? "seamlessScroll 45s linear infinite"
+                                : "none",
+                    }}
                 >
-                    <div
-                        ref={trackRef}
-                        className="flex gap-8 lg:gap-16"
-                        style={{
-                            width: "max-content",
-                            animation:
-                                cycleWidth > 0 && isInView
-                                    ? "seamlessScroll 45s linear infinite"
-                                    : "none",
-                        }}
-                    >
-                        {[...logos, ...logos, ...logos].map((logo, index) => (
-                            <div
-                                key={`${logo.id}-${index}`}
-                                className="flex-shrink-0 w-36 h-20 flex items-center justify-center rounded-lg"
-                            >
-                                {logo.src ? (
-                                    <img
-                                        src={logo.src}
-                                        alt={logo.name}
-                                        className="max-w-full max-h-full object-contain px-4"
-                                    />
-                                ) : (
-                                    <span className="text-gray-600 font-medium text-center px-4 text-sm">
-                                        {logo.name}
-                                    </span>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </motion.div>
-            </div>
+                    {[...logos, ...logos, ...logos].map((logo, index) => (
+                        <div
+                            key={`${logo.id}-${index}`}
+                            className="flex-shrink-0 w-36 h-20 flex items-center justify-center rounded-lg"
+                        >
+                            {logo.src ? (
+                                <img
+                                    src={logo.src}
+                                    alt={logo.name}
+                                    className="max-w-full max-h-full object-contain px-4"
+                                />
+                            ) : (
+                                <span className="text-gray-600 font-medium text-center px-4 text-sm">
+                                    {logo.name}
+                                </span>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </motion.div>
         </section>
     );
 }

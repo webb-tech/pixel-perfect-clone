@@ -38,18 +38,12 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY]);
 
-    const navLinks = [
-        {
-            name: "Våra tjänster",
-            href: "",
-            hasDropdown: true,
-            items: [
-                ...servicePages.map((page) => ({
-                    label: page.title,
-                    href: `/tjanster/${page.slug}`,
-                })),
-            ],
-        },
+    const navLinks: Array<{
+        name: string;
+        href: string;
+        hasDropdown?: boolean;
+        items?: Array<{ label: string; href: string }>;
+    }> = [
         {
             name: "Nyheter",
             href: "/nyheter",

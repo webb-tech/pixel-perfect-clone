@@ -33,7 +33,7 @@ const FAQ = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section ref={ref} className="section-beige py-20 lg:py-32">
+        <section ref={ref} className="section-white py-20 lg:py-32">
             <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

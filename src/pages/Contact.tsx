@@ -17,7 +17,7 @@ const Contact = () => {
                 <div className="section-container">
                     <div className="space-y-8">
                         <Breadcrumbs
-                            currentPage="Om oss"
+                            currentPage="Kontakta oss"
                             links={[{ label: "Start", href: "/" }]}
                         />
                         <h1 className="heading-lg">Kontakta oss</h1>

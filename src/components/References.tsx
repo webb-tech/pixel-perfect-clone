@@ -31,7 +31,7 @@ const References = () => {
     return (
         <section
             ref={ref}
-            className="section-white py-20 lg:py-32 border-t border-border/50"
+            className="section-beige py-20 lg:py-32 border-t border-border/50"
         >
             <div className="section-container">
                 <motion.div

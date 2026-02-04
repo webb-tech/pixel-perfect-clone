@@ -20,7 +20,7 @@ const News = () => {
     const startIndex = (currentPage - 1) * postsPerPage;
     const paginatedNews = sortedNews.slice(
         startIndex,
-        startIndex + postsPerPage
+        startIndex + postsPerPage,
     );
 
     return (
@@ -71,17 +71,39 @@ const News = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        {paginatedNews.map((item, i) => (
-                            <NewsCard
-                                key={i}
-                                slug={item.slug}
-                                thumbnailImg={item.thumbnailImg}
-                                date={item.date}
-                                title={item.title}
-                                excerpt={item.excerpt}
-                            />
-                        ))}
+                    <div className="space-y-8">
+                        {paginatedNews.length > 0 && (
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <NewsCard
+                                    slug={paginatedNews[0].slug}
+                                    thumbnailImg={paginatedNews[0].thumbnailImg}
+                                    date={paginatedNews[0].date}
+                                    title={paginatedNews[0].title}
+                                    excerpt={paginatedNews[0].excerpt}
+                                />
+                                <NewsCard
+                                    slug={paginatedNews[1].slug}
+                                    thumbnailImg={paginatedNews[1].thumbnailImg}
+                                    date={paginatedNews[1].date}
+                                    title={paginatedNews[1].title}
+                                    excerpt={paginatedNews[1].excerpt}
+                                />
+                            </div>
+                        )}
+                        {paginatedNews.length > 1 && (
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                                {paginatedNews.slice(2).map((item, i) => (
+                                    <NewsCard
+                                        key={i + 1}
+                                        slug={item.slug}
+                                        thumbnailImg={item.thumbnailImg}
+                                        date={item.date}
+                                        title={item.title}
+                                        excerpt={item.excerpt}
+                                    />
+                                ))}
+                            </div>
+                        )}
                     </div>
 
                     {totalPages > 1 && (
@@ -89,7 +111,7 @@ const News = () => {
                             <button
                                 onClick={() =>
                                     setCurrentPage((prev) =>
-                                        Math.max(1, prev - 1)
+                                        Math.max(1, prev - 1),
                                     )
                                 }
                                 disabled={currentPage === 1}
@@ -115,14 +137,14 @@ const News = () => {
                                         >
                                             {i + 1}
                                         </button>
-                                    )
+                                    ),
                                 )}
                             </div>
 
                             <button
                                 onClick={() =>
                                     setCurrentPage((prev) =>
-                                        Math.min(totalPages, prev + 1)
+                                        Math.min(totalPages, prev + 1),
                                     )
                                 }
                                 disabled={currentPage === totalPages}

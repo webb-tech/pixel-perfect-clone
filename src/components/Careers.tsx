@@ -12,7 +12,7 @@ const Careers = () => {
         <section
             ref={ref}
             id="karriar"
-            className="section-white py-20 lg:py-32"
+            className="section-beige py-20 lg:py-32"
         >
             <div className="section-container">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">

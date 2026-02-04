@@ -1,98 +1,26 @@
 [
     {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
+        "slug": "ny-elinstallation-energidistribution",
+        "date": "4 februari 2026",
+        "title": "MJ El tecknar ramavtal med E.ON Energidistribution",
         "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
+        "excerpt": "MJ El har tecknat ett omfattande ramavtal med E.ON Energidistribution AB för installationer inom kraftsegmentet. Avtalet omfattar både mindre och större projektentreprenader.",
+        "text": "MJ El har tecknat ett omfattande ramavtal med E.ON Energidistribution AB för installationer inom kraftsegmentet. Avtalet omfattar både mindre och större projektentreprenader vid stationer inom två av deras områden för energidistribution i Sverige. Detta är ett viktigt steg för MJ El att vidga sin serviceportfölj inom energisektorn."
     },
     {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
+        "slug": "nkt-karlskrona-projekt",
+        "date": "1 februari 2026",
+        "title": "Nytt uppdrag för elinstallationer i Karlskrona",
         "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
+        "excerpt": "MJ El har tilldelats ett betydande uppdrag för elinstallationer hos NKT i Karlskrona. Projektet omfattar installationer för både befintlig och ny infrastruktur.",
+        "text": "MJ El har tilldelats ett betydande uppdrag för elinstallationer hos NKT i Karlskrona, där Assemblins samtliga svenska affärsområden sedan tidigare är engagerade. Uppdraget omfattar elinstallationer för utbyggnaden av produktionskapaciteten vid anläggningen. Detta visar på ett starkt förtroende från NKT för MJ Els kompetens och leveransförmåga."
     },
     {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
+        "slug": "multitek-projekt-vasteras",
+        "date": "26 januari 2026",
+        "title": "Multitekniskt projekt i Västerås med fokus på hållbarhet",
         "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
-    },
-    {
-        "slug": "hello-world",
-        "date": "23 januari 2026",
-        "title": "Hello World",
-        "thumbnailImg": "/img/elinstallation.jpg",
-        "excerpt": "Test test test",
-        "text": "Hello world test"
+        "excerpt": "MJ El är del av ett multitekniskt projekt tillsammans med NCC Sverige AB i Västerås. Projektet fokuserar på återbruk och moderna installationslösningar.",
+        "text": "MJ El har tilldelats uppdrag inom ett multitekniskt projekt i Västerås tillsammans med NCC Sverige AB. Projektet är ett samarbete med Mälardalen Universitet och fokuserar på återbruk och moderna installationslösningar. Uppdraget omfattar el-, värme-, sanitet-, ventilations-, sprinkler- och automationsinstallationer för en totalordervärde om cirka 50 MSEK. Projektet representerar framtidens sätt att bygga med fokus på miljö och hållbarhet."
     }
 ]

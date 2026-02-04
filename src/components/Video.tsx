@@ -20,11 +20,15 @@ const Video = () => {
                     >
                         <div className="slug-tag mb-4">Om oss</div>
                         <h3 className="heading-lg text-foreground mb-6">
-                            Lorem, ipsum dolor.
+                            Elinstallationer, elservice och entreprenad
                         </h3>
                         <p className="text-body mb-8">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Autem, cum. Magni, quia.
+                            MJ El & Entreprenad tar ansvar för hela projekt,
+                            från noggrann planering och professionell
+                            installation till service och underhåll. Med högsta
+                            fokus på kvalitet, säkerhet och hållbara lösningar
+                            levererar vi kompletta elinstallationer och
+                            entreprenader som står sig över tid.
                         </p>
 
                         <a href="/om-oss" className="btn-primary inline-flex">
