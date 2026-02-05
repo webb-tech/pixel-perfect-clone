@@ -37,16 +37,7 @@ const Careers = () => {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="order-1 lg:order-2"
                     >
-                        <div className="slug-tag mb-4">
-                            <svg
-                                className="w-5 h-5"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                            >
-                                <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
-                            </svg>
-                            Jobba hos oss
-                        </div>
+                        <div className="slug-tag mb-4">Jobba hos oss</div>
 
                         <h2 className="heading-lg text-foreground mb-6">
                             Vill du jobba hos oss?

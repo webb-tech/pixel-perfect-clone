@@ -13,14 +13,17 @@ const Footer = () => {
             { name: "Snöskottning", href: "#" },
         ],
         foretag: [
-            { name: "Om oss", href: "#om-oss" },
-            { name: "Referenser", href: "#referenser" },
+            { name: "Om oss", href: "/om-oss" },
+            { name: "Referenser", href: "/referenser" },
             { name: "Karriär", href: "#" },
-            { name: "Kontakt", href: "#kontakt" },
+            { name: "Kontakt", href: "/kontakt" },
         ],
         kontakt: [
             { name: "08-123 456 78", href: "tel:+46812345678" },
-            { name: "info@dmtak.se", href: "mailto:info@dmtak.se" },
+            {
+                name: "info@mjelinstallationer.se",
+                href: "mailto:info@mjelinstallationer.se",
+            },
             { name: "Stockholm, Sverige", href: "#" },
         ],
     };

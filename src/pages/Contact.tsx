@@ -1,6 +1,69 @@
 import { MailIcon, Phone, Pin } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
+const workers = [
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/1.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/2.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/3.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/4.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/5.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/6.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/7.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/8.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/9.jpg",
+        email: "",
+    },
+    {
+        name: "Namn Efternamn",
+        role: "VD",
+        img: "/img/personal/10.jpg",
+        email: "",
+    },
+];
+
 const Contact = () => {
     return (
         <>
@@ -55,69 +118,27 @@ const Contact = () => {
                     <h2 className="heading-md mb-16">Våra medarbetare</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="flex flex-col gap-4">
-                            <img
-                                src="/img/personal/personal.jpg"
-                                alt=""
-                                className="rounded-sm"
-                            />
-                            <h3 className="text-lg font-bold">
-                                Namn Efternamn
-                            </h3>
-                            <span className="font-medium">VD</span>
-                            <span className="flex items-center gap-2 font-bold underline">
-                                <MailIcon size={18} />{" "}
-                                <a href="mailto:">Maila mig</a>
-                            </span>
-                        </div>
-
-                        <div className="flex flex-col gap-4">
-                            <img
-                                src="/img/personal/personal.jpg"
-                                alt=""
-                                className="rounded-sm"
-                            />
-                            <h3 className="text-lg font-bold">
-                                Namn Efternamn
-                            </h3>
-                            <span className="font-medium">VD</span>
-                            <span className="flex items-center gap-2 font-bold underline">
-                                <MailIcon size={18} />
-                                <a href="mailto:">Maila mig</a>
-                            </span>
-                        </div>
-
-                        <div className="flex flex-col gap-4">
-                            <img
-                                src="/img/personal/personal.jpg"
-                                alt=""
-                                className="rounded-sm"
-                            />
-                            <h3 className="text-lg font-bold">
-                                Namn Efternamn
-                            </h3>
-                            <span className="font-medium">VD</span>
-                            <span className="flex items-center gap-2 font-bold underline">
-                                <MailIcon size={18} />
-                                <a href="mailto:">Maila mig</a>
-                            </span>
-                        </div>
-
-                        <div className="flex flex-col gap-4">
-                            <img
-                                src="/img/personal/personal.jpg"
-                                alt=""
-                                className="rounded-sm"
-                            />
-                            <h3 className="text-lg font-bold">
-                                Namn Efternamn
-                            </h3>
-                            <span className="font-medium">VD</span>
-                            <span className="flex items-center gap-2 font-bold underline">
-                                <MailIcon size={18} />
-                                <a href="mailto:">Maila mig</a>
-                            </span>
-                        </div>
+                        {workers.map((w, idx) => (
+                            <div key={idx} className="flex flex-col gap-2">
+                                <img
+                                    src={w.img}
+                                    alt={w.name}
+                                    className="w-full aspect-square object-cover rounded-sm"
+                                />
+                                <h3 className="text-lg font-bold">{w.name}</h3>
+                                <span className="font-medium">{w.role}</span>
+                                <span className="flex items-center gap-2 font-bold underline">
+                                    <MailIcon size={18} />
+                                    <a
+                                        href={
+                                            w.email ? `mailto:${w.email}` : "#"
+                                        }
+                                    >
+                                        Maila mig
+                                    </a>
+                                </span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
