@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroVid from "../assets/video/hero-vid.mp4";
+import heroVid from "../assets/video/hero-vid-cut.mp4";
 
 const Hero = () => {
     return (
