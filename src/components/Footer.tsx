@@ -86,7 +86,7 @@ const Footer = () => {
                         <div className="mt-6">
                             <div className="flex items-center gap-4">
                                 <a
-                                    href="https://www.facebook.com"
+                                    href="https://www.facebook.com/"
                                     aria-label="Facebook"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const Footer = () => {
                                 </a>
 
                                 <a
-                                    href="https://www.instagram.com"
+                                    href="https://www.instagram.com/mj_elinstallationer_ab/"
                                     aria-label="Instagram"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -130,7 +130,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="border-t border-background/20 mt-12 mb-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 section-container">
                 <p className="text-background/70 text-sm">
                     © {currentYear} MJ El & Entreprenad AB. Alla rättigheter
                     förbehållna.
