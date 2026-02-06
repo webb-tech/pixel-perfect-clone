@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { NewsCard } from "@/components/NewsCard";
-import news from "@/content/news.json";
+import { loadNews } from "@/lib/loadNews";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CTA } from "@/components/CTA";
 
@@ -10,6 +10,7 @@ const News = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const postsPerPage = 9;
 
+    const news = loadNews();
     const sortedNews = [...news].sort((a, b) => {
         const dateA = new Date(a.date).getTime();
         const dateB = new Date(b.date).getTime();
@@ -72,7 +73,7 @@ const News = () => {
                     </div>
 
                     <div className="space-y-8">
-                        {paginatedNews.length > 0 && (
+                        {paginatedNews.length >= 2 && (
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                                 <NewsCard
                                     slug={paginatedNews[0].slug}
@@ -90,7 +91,18 @@ const News = () => {
                                 />
                             </div>
                         )}
-                        {paginatedNews.length > 1 && (
+                        {paginatedNews.length === 1 && (
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <NewsCard
+                                    slug={paginatedNews[0].slug}
+                                    thumbnailImg={paginatedNews[0].thumbnailImg}
+                                    date={paginatedNews[0].date}
+                                    title={paginatedNews[0].title}
+                                    excerpt={paginatedNews[0].excerpt}
+                                />
+                            </div>
+                        )}
+                        {paginatedNews.length > 2 && (
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                 {paginatedNews.slice(2).map((item, i) => (
                                     <NewsCard

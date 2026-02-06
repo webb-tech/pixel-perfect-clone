@@ -1,8 +1,10 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import ReferenceCard from "@/components/ReferenceCard";
-import references from "@/content/references.json";
+import { loadReferences } from "@/lib/loadReferences";
 
 const References = () => {
+    const references = loadReferences();
+
     return (
         <>
             <section className="pt-40">

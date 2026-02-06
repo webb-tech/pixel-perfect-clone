@@ -1,10 +1,8 @@
-// Hero, om oss, samarbetspartners, senaste nytt
-
-import heroImg from "@/assets/img/jobba-hos-oss.jpg";
+import heroImg from "@/assets/img/omoss.png";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTA } from "@/components/CTA";
 import { NewsCard } from "@/components/NewsCard";
-import news from "@/content/news.json";
+import { loadNews } from "@/lib/loadNews";
 import { ArrowRight } from "lucide-react";
 
 const About = () => {
@@ -17,7 +15,7 @@ const About = () => {
                     backgroundImage: `url(${heroImg})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
-                    backgroundColor: "rgba(0, 0, 0, 0.8)",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
                     backgroundBlendMode: "multiply",
                 }}
             >
@@ -89,12 +87,7 @@ const About = () => {
                     </p>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full mb-16">
-                        {news
-                            .sort(
-                                (a, b) =>
-                                    new Date(b.date).getTime() -
-                                    new Date(a.date).getTime()
-                            )
+                        {loadNews()
                             .slice(0, 3)
                             .map((item, i) => (
                                 <NewsCard

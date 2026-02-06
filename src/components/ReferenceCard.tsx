@@ -28,7 +28,7 @@ const ReferenceCard = ({
                 duration: 0.6,
                 delay: 0.2 + index * 0.1,
             }}
-            className="bg-white rounded-lg overflow-hidden shadow-lg"
+            className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
         >
             <div className="relative aspect-video w-full h-56">
                 <img
@@ -47,7 +47,7 @@ const ReferenceCard = ({
                 </p>
                 <a
                     href={href}
-                    className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
+                    className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-1.5 transition-all"
                 >
                     {linkText}
                     <ArrowRight className="w-4 h-4" />

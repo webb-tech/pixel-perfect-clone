@@ -40,9 +40,9 @@ export const NewsCard = ({
     };
 
     return (
-        <a href={`/nyheter/${slug}`}>
+        <a href={`/nyheter/${slug}`} className="block h-full">
             <div
-                className="p-3 bg-white flex flex-col gap-2 rounded-lg transition-shadow duration-300 hover:shadow-lg"
+                className="p-3 bg-white flex flex-col gap-2 rounded-lg transition-shadow duration-300 hover:shadow-lg h-full"
                 style={{
                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.15)",
                 }}
@@ -52,7 +52,7 @@ export const NewsCard = ({
                 <div
                     className="rounded-sm relative"
                     style={{
-                        height: "220px",
+                        height: "250px",
                         backgroundImage: `url(${thumbnailImg})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
@@ -73,12 +73,22 @@ export const NewsCard = ({
                         </div>
                     </div>
                 </div>
-                <div className="p-4 space-y-2">
+                <div className="p-4 space-y-2 flex flex-col flex-1">
                     <span className="text-sm font-medium">{date}</span>
 
                     <h2 className="text-lg font-bold">{title}</h2>
 
-                    <p>{excerpt}</p>
+                    {/* Limit excerpt length to avoid uneven card heights */}
+                    {(() => {
+                        const max = 140;
+                        if (!excerpt) return <p className="flex-1" />;
+                        const trimmed = excerpt.trim();
+                        const truncated =
+                            trimmed.length > max
+                                ? trimmed.slice(0, max - 3).trimEnd() + "..."
+                                : trimmed;
+                        return <p className="flex-1">{truncated}</p>;
+                    })()}
                 </div>
             </div>
         </a>

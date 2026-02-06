@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AspectRatio } from "./ui/aspect-ratio";
+import heroVid from "../assets/video/hero-vid-cut.mp4";
 
 const Video = () => {
     const ref = useRef(null);
@@ -46,7 +46,7 @@ const Video = () => {
                             <video
                                 className="w-full h-full object-cover rounded-lg"
                                 controls
-                                src="your-video-url-here.mp4"
+                                src={heroVid}
                             />
                         </AspectRatio>
                     </motion.div>

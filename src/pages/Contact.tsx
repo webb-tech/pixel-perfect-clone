@@ -1,66 +1,49 @@
 import { MailIcon, Phone, Pin } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import heroImg from "@/assets/img/kontaktaoss.png";
 
 const workers = [
     {
-        name: "Namn Efternamn",
+        name: "Madi Ellekvist",
         role: "VD",
-        img: "/img/personal/1.jpg",
-        email: "",
+        img: "/img/personal/madi-ellekvist.jpg",
+        email: "madi@mjelinstallationer.com",
     },
     {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/2.jpg",
-        email: "",
+        name: "Joakim Adamsson",
+        role: "Roll",
+        img: "/img/personal/joakim-adamsson.jpg",
+        email: "joakim@mjelinstallationer.com",
     },
     {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/3.jpg",
-        email: "",
+        name: "Vilmos Barta",
+        role: "Roll",
+        img: "/img/personal/vilmos-barta.jpg",
+        email: "vilmos.barta@mjelinstallationer.com",
     },
     {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/4.jpg",
-        email: "",
+        name: "Dennis Dy",
+        role: "Roll",
+        img: "/img/personal/dennis-dy.jpg",
+        email: "dennis.dy@mjelinstallationer.com",
     },
     {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/5.jpg",
-        email: "",
+        name: "Eric Paz Navas",
+        role: "Roll",
+        img: "/img/personal/eric-paz-navas.jpg",
+        email: "eric.paznavas@mjelinstallationer.com",
     },
     {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/6.jpg",
-        email: "",
+        name: "Hampus Ryberg",
+        role: "Roll",
+        img: "/img/personal/hampus-ryberg.jpg",
+        email: "hampus.ryberg@mjelinstallationer.com",
     },
     {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/7.jpg",
-        email: "",
-    },
-    {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/8.jpg",
-        email: "",
-    },
-    {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/9.jpg",
-        email: "",
-    },
-    {
-        name: "Namn Efternamn",
-        role: "VD",
-        img: "/img/personal/10.jpg",
-        email: "",
+        name: "William Kjellberg",
+        role: "Roll",
+        img: "/img/personal/william-kjellberg.jpg",
+        email: "william.kjellberg@mjelinstallationer.com",
     },
 ];
 
@@ -70,10 +53,10 @@ const Contact = () => {
             <section
                 className="pt-40 pb-16 text-white"
                 style={{
-                    backgroundImage: `url(${"/img/belysning.jpg"})`,
+                    backgroundImage: `url(${heroImg})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
-                    backgroundColor: "rgba(0, 0, 0, 0.8)",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
                     backgroundBlendMode: "multiply",
                 }}
             >
@@ -97,15 +80,15 @@ const Contact = () => {
                                 <Phone size={18} /> 070-123 45 67
                             </a>
                             <a
-                                href="mailto:info@mjelinstallationer.se"
+                                href="mailto:info@mjelinstallationer.com"
                                 className="flex items-center gap-2"
                             >
                                 <MailIcon size={18} />
-                                info@mjelinstallationer.se
+                                info@mjelinstallationer.com
                             </a>
                             <a href="" className="flex items-center gap-2">
                                 <Pin size={18} />
-                                Storgatan 1, 123 45
+                                Råsundavägen 4, 169 67 Solna
                             </a>
                         </div>
                     </div>

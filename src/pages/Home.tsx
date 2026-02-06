@@ -3,13 +3,13 @@ import References from "@/components/References";
 import Video from "@/components/Video";
 import CustomerBanner from "@/components/CustomerBanner";
 import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
 import { CTA } from "@/components/CTA";
 import Careers from "@/components/Careers";
 import ImageBlock from "@/components/ImageBlock";
+import { NewsSection } from "@/components/NewsSection";
 
 import img from "@/assets/img/elinstallation.jpg";
-import { NewsSection } from "@/components/NewsSection";
+import billaddarImg from "@/assets/img/billaddare.png";
 
 const Home = () => {
     return (
@@ -19,17 +19,17 @@ const Home = () => {
             <Video />
             <References />
             <ImageBlock
-                backgroundImg={img}
-                title="Smart och trygg elbilsladdning"
-                text="Med hjälp av vårt skalbara helhetserbjudande Assemblin Charge kan ni erbjuda problemfri elbilsladdning för era medarbetare, hyresgäster eller brf-medlemmar."
+                backgroundImg={billaddarImg}
+                title="Skalbara lösningar för elbilsladdning"
+                text="Som en ledande leverantör erbjuder vi skräddarsydda, skalbara lösningar för elbilsladdning till företag, fastighetsägare och bostadsrättsföreningar. Vi ansvarar för design, installation, drift och service med hög säkerhet och driftsäkerhet."
                 btnLabel="Läs mer"
                 btnHref="#"
             />
             <NewsSection />
             <ImageBlock
                 backgroundImg={img}
-                title="Solceller - framtidens energiproduktion"
-                text="Vi hjälper dig att fånga och lagra solenergi genom installation av moderna och effektiva solpaneler eller solfångare med tillhörande lagring."
+                title="Entreprenad för större installationsprojekt"
+                text="Vi genomför elentreprenader för nybyggnation, ombyggnad och större fastighetsprojekt. Våra leveranser inkluderar projektering, installation, samordning och efterföljande service — alltid med fokus på säkerhet, tid och ekonomi."
                 btnLabel="Läs mer"
                 btnHref="#"
             />

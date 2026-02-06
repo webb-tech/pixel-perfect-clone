@@ -1,11 +1,12 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
-import news from "@/content/news.json";
+import { findNewsBySlug } from "@/lib/loadNews";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 
 const NewsArticel = () => {
     const { slug } = useParams();
-    const newsContent = news.find((item) => item.slug === slug);
+    const newsContent = slug ? findNewsBySlug(slug) : undefined;
 
     if (!newsContent) {
         return <NotFound />;
@@ -39,7 +40,7 @@ const NewsArticel = () => {
 
                     <span className="font-medium">{newsContent.date}</span>
 
-                    <p>{newsContent.text}</p>
+                    <MarkdownRenderer content={newsContent.content} />
                 </div>
             </section>
         </>
