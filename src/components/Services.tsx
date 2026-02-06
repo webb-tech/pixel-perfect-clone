@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 import elinstallationImg from "@/assets/img/elinstallation.jpg";
 import belysningImg from "@/assets/img/belysning.jpg";
-import felsokningImg from "@/assets/img/felsökning.jpg";
+import felsokningImg from "@/assets/img/felsokning.jpg";
 import elcentralImg from "@/assets/img/elcentral.jpg";
 
 const services = [

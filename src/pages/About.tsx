@@ -1,5 +1,5 @@
 import heroImg from "@/assets/img/omoss.png";
-import bannerImg from "@/assets/img/felsökning.jpg";
+import bannerImg from "@/assets/img/felsokning.jpg";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTA } from "@/components/CTA";
 import { NewsCard } from "@/components/NewsCard";
