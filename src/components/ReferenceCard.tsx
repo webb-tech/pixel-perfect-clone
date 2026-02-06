@@ -28,7 +28,7 @@ const ReferenceCard = ({
                 duration: 0.6,
                 delay: 0.2 + index * 0.1,
             }}
-            className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-200"
+            className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
         >
             <div className="relative aspect-video w-full h-56">
                 <img
