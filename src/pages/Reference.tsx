@@ -1,11 +1,12 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import references from "@/content/references.json";
+import { findReferenceBySlug } from "@/lib/loadReferences";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 
 const Reference = () => {
     const { slug } = useParams();
-    const referenceContent = references.find((item) => item.slug === slug);
+    const referenceContent = slug ? findReferenceBySlug(slug) : undefined;
 
     if (!referenceContent) {
         return <NotFound />;
@@ -38,7 +39,7 @@ const Reference = () => {
 
             <section className="pt-8 pb-16">
                 <div className="section-container">
-                    <article>{referenceContent.description}</article>
+                    <MarkdownRenderer content={referenceContent.content} />
                 </div>
             </section>
         </>

@@ -1,9 +1,7 @@
-import news from "@/content/news.json";
+import { loadNews } from "@/lib/loadNews";
 
 export const NewsSection = () => {
-    const latestNews = [...news]
-        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-        .slice(0, 3);
+    const latestNews = loadNews().slice(0, 3);
 
     return (
         <section className="py-20">

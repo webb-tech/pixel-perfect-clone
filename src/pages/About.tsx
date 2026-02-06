@@ -2,7 +2,7 @@ import heroImg from "@/assets/img/omoss.png";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTA } from "@/components/CTA";
 import { NewsCard } from "@/components/NewsCard";
-import news from "@/content/news.json";
+import { loadNews } from "@/lib/loadNews";
 import { ArrowRight } from "lucide-react";
 
 const About = () => {
@@ -87,12 +87,7 @@ const About = () => {
                     </p>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full mb-16">
-                        {news
-                            .sort(
-                                (a, b) =>
-                                    new Date(b.date).getTime() -
-                                    new Date(a.date).getTime(),
-                            )
+                        {loadNews()
                             .slice(0, 3)
                             .map((item, i) => (
                                 <NewsCard
