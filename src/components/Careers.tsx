@@ -40,13 +40,14 @@ const Careers = () => {
                         <div className="slug-tag mb-4">Jobba hos oss</div>
 
                         <h2 className="heading-lg text-foreground mb-6">
-                            Vill du jobba hos oss?
+                            Bli en del av MJ El & Entreprenad
                         </h2>
 
                         <p className="text-body mb-6">
-                            Vi söker behöriga elektriker och montörer för
-                            entreprenad och service. Är du kundfokuserad? Hör av
-                            dig.
+                            Vi växer och söker nya talanger! Just nu letar vi
+                            efter engagerade elektriker, projektledare och andra
+                            specialister som vill vara med och driva våra
+                            samarbeten framåt.
                         </p>
 
                         <a href="#kontakt" className="btn-primary">

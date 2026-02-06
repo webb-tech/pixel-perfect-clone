@@ -22,16 +22,12 @@ const Home = () => {
                 backgroundImg={billaddarImg}
                 title="Skalbara lösningar för elbilsladdning"
                 text="Som en ledande leverantör erbjuder vi skräddarsydda, skalbara lösningar för elbilsladdning till företag, fastighetsägare och bostadsrättsföreningar. Vi ansvarar för design, installation, drift och service med hög säkerhet och driftsäkerhet."
-                btnLabel="Läs mer"
-                btnHref="#"
             />
             <NewsSection />
             <ImageBlock
                 backgroundImg={img}
-                title="Entreprenad för större installationsprojekt"
-                text="Vi genomför elentreprenader för nybyggnation, ombyggnad och större fastighetsprojekt. Våra leveranser inkluderar projektering, installation, samordning och efterföljande service — alltid med fokus på säkerhet, tid och ekonomi."
-                btnLabel="Läs mer"
-                btnHref="#"
+                title="Entreprenad för större projekt"
+                text="Vi tar hand om hela entreprenaden för nybyggnationer, ombyggnationer och större fastighetsprojekt. Vi ansvarar för projektering, samordning, installation och uppföljning, alltid med fokus på kvalitet och säkerhet!"
             />
 
             <FAQ />

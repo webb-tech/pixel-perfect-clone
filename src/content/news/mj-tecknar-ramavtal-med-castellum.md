@@ -2,7 +2,7 @@
 slug: "mj-tecknar-ramavtal-med-castellum"
 title: "MJ tecknar ramavtal med Castellum"
 date: "2026-02-06"
-thumbnailImg: "/img/nyheter/ica.png"
+thumbnailImg: "/img/nyheter/castellum.png"
 excerpt: "MJ El & Entreprenad har nyligen tecknat ett ramavtal med Castellum, en av Sveriges största fastighetsägare. Avtalet innebär ett långsiktigt samarbete där MJ ansvarar för att leverera högkvalitativa och trygga lösningar."
 published: true
 ---

@@ -1,7 +1,7 @@
 ---
 slug: "mj-fyller-5-ar"
 title: "MJ El & Entreprenad fyller 5 år"
-date: "2026-02-06"
+date: "2026-01-28"
 thumbnailImg: "/img/nyheter/mj-fyller-5-ar.png"
 excerpt: "Den 28 januari 2026 firar MJ El & Entreprenad 5 år som leverantör av professionella elinstallationer och entreprenadtjänster! Under dessa år har företaget vuxit och etablerat sig som en pålitlig partner inom elinstallation och entreprenad, med fokus på kvalitet, säkerhet och långsiktiga lösningar. "
 published: true

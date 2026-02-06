@@ -34,14 +34,15 @@ const App = () => (
                         />
                         <Route path="/om-oss" element={<About />} />
                         <Route path="/kontakt" element={<Contact />} />
+                        <Route path="/nyheter" element={<News />} />
+                        <Route path="/referenser" element={<References />} />
                     </Route>
                     <Route element={<DefaultLayout />}>
-                        <Route path="/nyheter" element={<News />} />
                         <Route
                             path="/nyheter/:slug"
                             element={<NewsArticel />}
                         />
-                        <Route path="/referenser" element={<References />} />
+
                         <Route path="*" element={<NotFound />} />
                     </Route>
                 </Routes>

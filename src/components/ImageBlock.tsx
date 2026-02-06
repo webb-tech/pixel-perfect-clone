@@ -2,8 +2,8 @@ interface ImageBlockProps {
     backgroundImg: string;
     title: string;
     text: string;
-    btnLabel: string;
-    btnHref: string;
+    btnLabel?: string;
+    btnHref?: string;
 }
 
 export default function ImageBlock({
@@ -26,10 +26,14 @@ export default function ImageBlock({
         >
             <div className="section-container flex flex-col items-center gap-6">
                 <h2 className="text-4xl font-bold">{title}</h2>
+
                 <p className="max-w-lg">{text}</p>
-                <a href={btnHref} className="btn-primary">
-                    {btnLabel}
-                </a>
+
+                {btnLabel && btnHref && (
+                    <a href={btnHref} className="btn-primary">
+                        {btnLabel}
+                    </a>
+                )}
             </div>
         </section>
     );
