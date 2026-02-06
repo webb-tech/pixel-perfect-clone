@@ -15,6 +15,7 @@ import References from "@/pages/References";
 import Reference from "@/pages/Reference";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
+import Career from "@/pages/Career";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
                         <Route path="/kontakt" element={<Contact />} />
                         <Route path="/nyheter" element={<News />} />
                         <Route path="/referenser" element={<References />} />
+                        <Route path="/karriar" element={<Career />} />
                     </Route>
                     <Route element={<DefaultLayout />}>
                         <Route

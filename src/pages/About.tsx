@@ -30,7 +30,7 @@ const About = () => {
 
                     <h1 className="heading-lg">Om oss</h1>
 
-                    <p className="text-xl max-w-3xl">
+                    <p className="max-w-3xl">
                         Vi är ett erfaret företag inom elinstallation och
                         entreprenad, som levererar säkra, hållbara och
                         professionella lösningar till bostadsrättsföreningar,
