@@ -1,4 +1,5 @@
 import { loadNews } from "@/lib/loadNews";
+import { NewsCard } from "./NewsCard";
 
 export const NewsSection = () => {
     const latestNews = loadNews().slice(0, 3);
@@ -6,37 +7,22 @@ export const NewsSection = () => {
     return (
         <section className="py-20">
             <div className="section-container">
-                <h2 className="heading-lg mb-12 text-center">Nyheter</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <h2 className="heading-lg text-center mb-4">
+                    Senaste nytt hos MJ
+                </h2>
+                <p className="mb-12 text-center">
+                    Läs våra senaste nyheter och ta del av vår utveckling!
+                </p>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                     {latestNews.map((item, i) => (
-                        <a
-                            key={i}
-                            href={`/nyheter/${item.slug}`}
-                            className="group"
-                        >
-                            <div className="space-y-4">
-                                <div
-                                    className="w-full rounded-lg overflow-hidden bg-gray-200"
-                                    style={{
-                                        aspectRatio: "16/10",
-                                        backgroundImage: `url(${item.thumbnailImg})`,
-                                        backgroundPosition: "center",
-                                        backgroundSize: "cover",
-                                    }}
-                                />
-                                <div className="space-y-2">
-                                    <p className="text-sm font-medium text-gray-600">
-                                        {item.date}
-                                    </p>
-                                    <h3 className="text-xl font-bold text-black leading-tight">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-base text-gray-700">
-                                        {item.excerpt}
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
+                        <NewsCard
+                            key={item.slug ?? i}
+                            slug={item.slug}
+                            thumbnailImg={item.thumbnailImg}
+                            date={item.date}
+                            title={item.title}
+                            excerpt={item.excerpt}
+                        />
                     ))}
                 </div>
                 <div className="mt-12 flex justify-center">

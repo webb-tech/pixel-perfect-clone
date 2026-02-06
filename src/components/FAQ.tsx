@@ -6,28 +6,25 @@ import { ArrowRight } from "lucide-react";
 
 const faqs = [
     {
-        question: "Jobbar ni med bostadsrättsföreningar?",
-        answer: "Ja. Vi utför installationer och entreprenader för bostadsrättsföreningar och samarbetar med styrelser och förvaltare.",
+        question: "Vilka typer av fastighetsprojekt kan ni ta på er? ",
+        answer: "",
     },
     {
-        question: "Kan ni hantera projektering och tillstånd?",
-        answer: "Ja. Vi erbjuder projektering, ansökningar och komplett dokumentation vid överlämning.",
+        question:
+            "Ansvarar ni för hela entreprenaden eller bara delar av projektet? ",
+        answer: "",
     },
     {
-        question: "Hur lång tid tar ett vanligt projekt?",
-        answer: "Det beror på omfattningen — mindre arbeten tar dagar, större jobb kan ta veckor. Vi lämnar alltid en tidplan.",
+        question: "Vilka områden arbetar ni i?",
+        answer: "",
     },
     {
-        question: "Vad kostar era tjänster?",
-        answer: "Kostnaden varierar med omfattning och material. Vi erbjuder platsbesiktning och en tydlig offert.",
+        question: "Erbjuder ni uppföljning och service efter projektets slut? ",
+        answer: "",
     },
     {
-        question: "Vilka garantier har ni?",
-        answer: "Vi arbetar med behöriga elektriker, har ansvarsförsäkring och lämnar garanti på utfört arbete.",
-    },
-    {
-        question: "Kan ni arbeta utan större driftstörningar?",
-        answer: "Ja. Vi planerar arbeten för att minimera avbrott och informerar berörda boende.",
+        question: "Hur går det till att begära en offert? ",
+        answer: "",
     },
 ];
 

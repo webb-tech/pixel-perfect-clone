@@ -44,14 +44,11 @@ const References = () => {
                         Kundreferenser
                     </div>
                     <h2 className="heading-lg text-foreground mb-4">
-                        Ett urval av våra kundreferenser
+                        Kolla in våra kundreferenser
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto text-center">
-                        Vi har genomfört elinstallationer och större
-                        entreprenader i hela Stockholm, från innerstad till
-                        förort. Bläddra i våra referensprojekt för att se
-                        exempel från ditt område och få inspiration inför ert
-                        nästa projekt.
+                        Följ våra projekt berättelser och se våra lösningar för
+                        BRF:er, fastighetsägare och företag runt om i Sverige.
                     </p>
                 </motion.div>
 

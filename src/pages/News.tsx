@@ -4,6 +4,7 @@ import { NewsCard } from "@/components/NewsCard";
 import { loadNews } from "@/lib/loadNews";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CTA } from "@/components/CTA";
+import heroImg from "@/assets/img/bygge.jpg";
 
 const News = () => {
     const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
@@ -26,8 +27,17 @@ const News = () => {
 
     return (
         <>
-            <section className="pt-40 pb-16">
-                <div className="section-container flex flex-col items-center space-y-4">
+            <section
+                className="py-40 text-white"
+                style={{
+                    backgroundImage: `url(${heroImg})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
+                    backgroundBlendMode: "multiply",
+                }}
+            >
+                <div className="section-container space-y-8">
                     <Breadcrumbs
                         currentPage="Nyheter"
                         links={[{ label: "Start", href: "/" }]}

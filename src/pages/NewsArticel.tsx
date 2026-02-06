@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 import { findNewsBySlug } from "@/lib/loadNews";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
+import { FaFacebook, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const NewsArticel = () => {
     const { slug } = useParams();
@@ -41,6 +43,48 @@ const NewsArticel = () => {
                     <span className="font-medium">{newsContent.date}</span>
 
                     <MarkdownRenderer content={newsContent.content} />
+
+                    <div className="pt-6">
+                        <h3 className="font-bold mb-4">
+                            Följ våra sociala medier
+                        </h3>
+                        <div className="flex items-center flex-wrap gap-3">
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center px-3 py-3 rounded-full bg-primary"
+                            >
+                                <FaFacebook size={20} color="white" />
+                            </a>
+
+                            <a
+                                href="https://x.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center px-3 py-3 rounded-full bg-primary"
+                            >
+                                <FaXTwitter size={20} color="white" />
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center px-3 py-3 rounded-full bg-primary"
+                            >
+                                <FaLinkedinIn size={20} color="white" />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center px-3 py-3 rounded-full bg-primary"
+                            >
+                                <FaInstagram size={20} color="white" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>

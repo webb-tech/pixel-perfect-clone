@@ -14,13 +14,11 @@ export const CTA = () => {
             >
                 <div className="section-container bg-neutral-400/30 backdrop-blur-3xl p-10 lg:p-16 rounded-md border border-white/30 flex flex-col lg:flex-row gap-8 lg:gap-32 lg:items-center text-white translate-y-[30%] lg:translate-y-[110%]">
                     <div className="space-y-2">
-                        <h2 className="heading-md">Begär en offert</h2>
+                        <h2 className="heading-md">Kom i kontakt med oss</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sunt voluptate sapiente, in vel eum
-                            praesentium labore animi, rem porro delectus harum
-                            quas, mollitia explicabo cumque voluptatibus dolorem
-                            quia! Cumque, ea.
+                            Vill du ha en offert för elinstallation eller
+                            entreprenadtjänster? Kontakta oss så kopplar vi dig
+                            direkt till en av våra projektledare.
                         </p>
                     </div>
                     <a href="#kontakt" className="btn-primary lg:w-96">

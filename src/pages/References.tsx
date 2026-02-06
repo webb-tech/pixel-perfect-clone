@@ -1,14 +1,24 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import ReferenceCard from "@/components/ReferenceCard";
 import { loadReferences } from "@/lib/loadReferences";
+import heroImg from "@/assets/img/bygge.jpg";
 
 const References = () => {
     const references = loadReferences();
 
     return (
         <>
-            <section className="pt-40">
-                <div className="section-container space-y-4">
+            <section
+                className="py-40 text-white"
+                style={{
+                    backgroundImage: `url(${heroImg})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
+                    backgroundBlendMode: "multiply",
+                }}
+            >
+                <div className="section-container space-y-8">
                     <Breadcrumbs
                         currentPage="Våra referenser"
                         links={[{ label: "Start", href: "/" }]}

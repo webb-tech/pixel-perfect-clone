@@ -51,7 +51,7 @@ const Contact = () => {
     return (
         <>
             <section
-                className="pt-40 pb-16 text-white"
+                className="py-40 text-white"
                 style={{
                     backgroundImage: `url(${heroImg})`,
                     backgroundPosition: "center",

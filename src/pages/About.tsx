@@ -1,9 +1,12 @@
 import heroImg from "@/assets/img/omoss.png";
+import bannerImg from "@/assets/img/felsökning.jpg";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTA } from "@/components/CTA";
 import { NewsCard } from "@/components/NewsCard";
 import { loadNews } from "@/lib/loadNews";
 import { ArrowRight } from "lucide-react";
+import trygghansa from "@/assets/img/trygghansa.png";
+import elsakerhetsverket from "@/assets/img/elsakerhetsverket.png";
 
 const About = () => {
     return (
@@ -28,9 +31,10 @@ const About = () => {
                     <h1 className="heading-lg">Om oss</h1>
 
                     <p className="text-xl max-w-3xl">
-                        Vi är ett takläggarföretag med över 20 års erfarenhet
-                        inom takläggning, plåtslageri, takservice och takmålning
-                        i Stockholm.
+                        Vi är ett erfaret företag inom elinstallation och
+                        entreprenad, som levererar säkra, hållbara och
+                        professionella lösningar till bostadsrättsföreningar,
+                        fastighetsägare och företag.
                     </p>
                 </div>
             </section>
@@ -40,24 +44,21 @@ const About = () => {
                     <span className="slug-tag">Om MJ</span>
 
                     <h2 className="heading-md">
-                        Löften, hantverk och tak som håller längre
+                        Engagemang, kompetens och lösningar som håller
                     </h2>
 
                     <p>
-                        Vår grundläggande inställning är att alltid vara ärliga
-                        och att med vårt eget beteende och hantverk visa vägen:
-                        Om man är ärlig och stolt över sitt hantverk kan man
-                        alltid gå med ryggen rak. I en bransch som ofta kantas
-                        av oseriösa aktörer tar MJ Elinstallationer uppgiften på
-                        allvar. Vårt mål är att alltid leverera ett tak av
-                        högsta kvalitet genom tydliga rutiner, eﬀektiviserat
-                        arbetsflöde och genomgående yrkesstolthet.
+                        På MJ El & Entreprenad tar vi ansvar för hela processen,
+                        från första planering till färdig installation och
+                        uppföljning. Vi kombinerar teknisk expertis med
+                        strukturerad projektledning för att leverera lösningar
+                        som fungerar både idag och i framtiden.
                     </p>
                 </div>
 
                 <div
                     style={{
-                        backgroundImage: `url(${"/img/belysning.jpg"})`,
+                        backgroundImage: `url(${bannerImg})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         height: 500,
@@ -65,12 +66,19 @@ const About = () => {
                 ></div>
             </section>
 
-            <section id="partners" className="py-24 section-beige">
+            <section id="partners" className="py-16 section-beige">
                 <div className="section-container flex flex-col items-center max-w-3xl">
-                    <h2 className="heading-md mb-8">Våra samarbetspartners</h2>
+                    <h2 className="heading-md mb-8">
+                        Vi är auktoriserade elinstallatörer
+                    </h2>
 
                     <div className="flex items-center justify-evenly flex-wrap gap-8">
-                        {/* bilder här */}
+                        <img src={trygghansa} alt="Tygghansa" width={300} />
+                        <img
+                            src={elsakerhetsverket}
+                            alt="Elsäkerhetsverket"
+                            width={300}
+                        />
                     </div>
                 </div>
             </section>
