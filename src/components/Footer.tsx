@@ -1,4 +1,5 @@
 import logo from "@/assets/img/logo.png";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -19,12 +20,11 @@ const Footer = () => {
             { name: "Kontakt", href: "/kontakt" },
         ],
         kontakt: [
-            { name: "08-123 456 78", href: "tel:+46812345678" },
             {
-                name: "info@mjelinstallationer.se",
-                href: "mailto:info@mjelinstallationer.se",
+                name: "info@mjelinstallationer.com",
+                href: "mailto:info@mjelinstallationer.com",
             },
-            { name: "Stockholm, Sverige", href: "#" },
+            { name: "Råsundavägen 4, 168 67 Solna", href: "#" },
         ],
     };
 
@@ -38,49 +38,19 @@ const Footer = () => {
                             <img src={logo} alt="Logo" width={100} />
                         </div>
                         <p className="text-background/70 text-sm leading-relaxed mb-6">
-                            MJ Elinstallationer är ett familjeföretag med över
-                            20 års erfarenhet av elinstallation i Stockholm. Vi
-                            erbjuder kvalitetsarbete med 15 års garanti.
+                            MJ El & Entreprenad levererar professionella
+                            elinstallationer och entreprenadtjänster med fokus
+                            på kvalitet, säkerhet och långsiktighet.
                         </p>
-                        <div className="flex items-center gap-1">
-                            {[...Array(5)].map((_, i) => (
-                                <svg
-                                    key={i}
-                                    className="w-4 h-4 text-yellow-400 fill-current"
-                                    viewBox="0 0 20 20"
-                                >
-                                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                </svg>
-                            ))}
-                            <span className="text-background/70 text-sm ml-2">
-                                100+ omdömen
-                            </span>
-                        </div>
                     </div>
 
                     {/* Tjänster */}
-                    <div>
-                        <h4 className="text-background font-semibold mb-6">
-                            Tjänster
-                        </h4>
-                        <ul className="space-y-3">
-                            {footerLinks.tjanster.map((link) => (
-                                <li key={link.name}>
-                                    <a
-                                        href={link.href}
-                                        className="text-background/70 hover:text-background transition-colors text-sm"
-                                    >
-                                        {link.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    <div></div>
 
-                    {/* Företag */}
+                    {/* Om oss */}
                     <div>
                         <h4 className="text-background font-semibold mb-6">
-                            Företag
+                            Om oss
                         </h4>
                         <ul className="space-y-3">
                             {footerLinks.foretag.map((link) => (
@@ -113,29 +83,71 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
+                        <div className="mt-6">
+                            <div className="flex items-center gap-4">
+                                <a
+                                    href="https://www.facebook.com"
+                                    aria-label="Facebook"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-background/70 hover:text-background transition-colors"
+                                >
+                                    <FaFacebookF
+                                        className="w-5 h-5"
+                                        aria-hidden
+                                    />
+                                </a>
+
+                                <a
+                                    href="https://www.instagram.com"
+                                    aria-label="Instagram"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-background/70 hover:text-background transition-colors"
+                                >
+                                    <FaInstagram
+                                        className="w-5 h-5"
+                                        aria-hidden
+                                    />
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com"
+                                    aria-label="LinkedIn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-background/70 hover:text-background transition-colors"
+                                >
+                                    <FaLinkedinIn
+                                        className="w-5 h-5"
+                                        aria-hidden
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Bottom Bar */}
-                <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-background/70 text-sm">
-                        © {currentYear} MJ ELINSTALLATIONER. Alla rättigheter
-                        förbehållna.
-                    </p>
-                    <div className="flex items-center gap-6">
-                        <a
-                            href="#"
-                            className="text-background/70 hover:text-background transition-colors text-sm"
-                        >
-                            Integritetspolicy
-                        </a>
-                        <a
-                            href="#"
-                            className="text-background/70 hover:text-background transition-colors text-sm"
-                        >
-                            Villkor
-                        </a>
-                    </div>
+            {/* Bottom Bar */}
+            <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p className="text-background/70 text-sm">
+                    © {currentYear} MJ El & Entreprenad AB. Alla rättigheter
+                    förbehållna.
+                </p>
+                <div className="flex items-center gap-6">
+                    <a
+                        href="#"
+                        className="text-background/70 hover:text-background transition-colors text-sm"
+                    >
+                        Integritetspolicy
+                    </a>
+                    <a
+                        href="#"
+                        className="text-background/70 hover:text-background transition-colors text-sm"
+                    >
+                        Villkor
+                    </a>
                 </div>
             </div>
         </footer>

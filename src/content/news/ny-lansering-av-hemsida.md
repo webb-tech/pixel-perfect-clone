@@ -1,7 +1,7 @@
 ---
 slug: "ny-lansering-av-hemsida"
 title: "Ny lansering av hemsida"
-date: "2026-02-06"
+date: "2026-02-11"
 thumbnailImg: "/img/nyheter/ny-lansering-av-hemsida.png"
 excerpt: "Vi är stolta att presentera vår nya och uppdaterade hemsida. Den är designad för att ge kunder och samarbetspartners en tydlig översikt över våra tjänster och pågående projekt. Den nya hemsidan har ett stilrent och modernt utseende, med enkel navigering och bättre tillgång till information om våra referensprojekt och nyheter som händer. "
 published: true

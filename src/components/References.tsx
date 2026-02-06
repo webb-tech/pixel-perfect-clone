@@ -47,8 +47,8 @@ const References = () => {
                         Kolla in våra kundreferenser
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto text-center">
-                        Följ våra projekt berättelser och se våra lösningar för
-                        BRF:er, fastighetsägare och företag runt om i Sverige.
+                        Följ våra kundcase och se våra lösningar för BRF:er,
+                        fastighetsägare och företag runt om i Sverige.
                     </p>
                 </motion.div>
 

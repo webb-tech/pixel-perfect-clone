@@ -50,7 +50,7 @@ const Header = ({ darkInitially = false }: { darkInitially?: boolean }) => {
         },
         {
             name: "Jobba hos oss",
-            href: "#jobb",
+            href: "/karriar",
         },
         { name: "Referenser", href: "/referenser", hasDropdown: false },
         { name: "Om oss", href: "/om-oss", hasDropdown: false },

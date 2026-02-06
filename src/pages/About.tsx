@@ -30,7 +30,7 @@ const About = () => {
 
                     <h1 className="heading-lg">Om oss</h1>
 
-                    <p className="text-xl max-w-3xl">
+                    <p className="max-w-3xl">
                         Vi är ett erfaret företag inom elinstallation och
                         entreprenad, som levererar säkra, hållbara och
                         professionella lösningar till bostadsrättsföreningar,
@@ -40,7 +40,7 @@ const About = () => {
             </section>
 
             <section id="about" className="pt-24">
-                <div className="section-container flex flex-col items-center max-w-3xl space-y-4 mb-24">
+                <div className="section-container flex flex-col items-center max-w-3xl space-y-4 mb-24 text-center">
                     <span className="slug-tag">Om MJ</span>
 
                     <h2 className="heading-md">
@@ -84,7 +84,7 @@ const About = () => {
             </section>
 
             <section id="news" className="py-24 section-white">
-                <div className="section-container flex flex-col items-center">
+                <div className="section-container flex flex-col items-center text-center">
                     <span className="slug-tag">Aktuellt</span>
                     <h2 className="heading-md mb-8">Senaste nytt hos oss</h2>
 

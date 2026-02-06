@@ -1,7 +1,7 @@
 ---
 slug: "mj-flyttar-till-rasundavagen"
 title: "MJ El & Entreprenad flyttar till Råsundavägen! "
-date: "2026-02-06"
+date: "2025-12-01"
 thumbnailImg: "/img/nyheter/mj-flyttar-till-rasundavagen2.png"
 excerpt: "Vi har nu etablerat oss på vårt nya kontor på Råsundavägen 4 i Solna. Flytten markerar nästa steg i företagets utveckling och ger oss bättre förutsättningar att fortsätta växa och ta oss an nya projekt inom elinstallation och entreprenad."
 published: true
