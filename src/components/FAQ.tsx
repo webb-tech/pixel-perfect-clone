@@ -6,24 +6,28 @@ import { ArrowRight } from "lucide-react";
 
 const faqs = [
     {
-        question: "Kan ni lägga tak på vintern?",
-        answer: "Ja, vi utför takläggning året runt. Vi har lång erfarenhet av takarbeten under alla väderförhållanden och vidtar nödvändiga åtgärder för att säkerställa kvaliteten på arbetet oavsett årstid.",
-    },
-    {
-        question: "Hur lång tid tar ett takbyte?",
-        answer: "Tiden för ett takbyte varierar beroende på takets storlek och komplexitet. Ett vanligt villatak tar normalt 1-2 veckor, medan större projekt för bostadsrättsföreningar kan ta 4-8 veckor.",
-    },
-    {
-        question: "Vad kostar det att byta tak?",
-        answer: "Priset beror på många faktorer såsom takets storlek, typ av material, takets skick och eventuella tillval. Kontakta oss för en kostnadsfri offert baserad på dina specifika behov.",
-    },
-    {
-        question: "Vilka garantier ger ni?",
-        answer: "Vi erbjuder 15 års garanti på alla våra takarbeten. Detta omfattar både material och utförande. Vi står för kvalitet och vill att våra kunder ska känna sig trygga.",
-    },
-    {
         question: "Jobbar ni med bostadsrättsföreningar?",
-        answer: "Ja, vi är specialiserade på takarbeten för bostadsrättsföreningar. Vi har gedigen erfarenhet av att hantera större projekt och samarbeta med styrelser och förvaltare.",
+        answer: "Ja. Vi utför installationer och entreprenader för bostadsrättsföreningar och samarbetar med styrelser och förvaltare.",
+    },
+    {
+        question: "Kan ni hantera projektering och tillstånd?",
+        answer: "Ja. Vi erbjuder projektering, ansökningar och komplett dokumentation vid överlämning.",
+    },
+    {
+        question: "Hur lång tid tar ett vanligt projekt?",
+        answer: "Det beror på omfattningen — mindre arbeten tar dagar, större jobb kan ta veckor. Vi lämnar alltid en tidplan.",
+    },
+    {
+        question: "Vad kostar era tjänster?",
+        answer: "Kostnaden varierar med omfattning och material. Vi erbjuder platsbesiktning och en tydlig offert.",
+    },
+    {
+        question: "Vilka garantier har ni?",
+        answer: "Vi arbetar med behöriga elektriker, har ansvarsförsäkring och lämnar garanti på utfört arbete.",
+    },
+    {
+        question: "Kan ni arbeta utan större driftstörningar?",
+        answer: "Ja. Vi planerar arbeten för att minimera avbrott och informerar berörda boende.",
     },
 ];
 
@@ -48,10 +52,11 @@ const FAQ = () => {
                         Undrar du något?
                     </h2>
                     <p className="text-body">
-                        Det kan dyka upp många frågor då man först börjar
-                        fundera på att lägga om sitt tak. Här svarar vi på några
-                        av de vanligaste frågorna vi stöter på. Om din fråga
-                        inte besvaras här, tveka inte att kontakta oss.
+                        Det är vanligt att ha frågor kring elinstallationer i
+                        fastigheter. Här besvarar vi några av de vanligaste
+                        frågorna från bostadsrättsföreningar och beställare. Om
+                        din fråga inte besvaras här, tveka inte att kontakta oss
+                        så hjälper vi gärna till.
                     </p>
                     <a
                         href="#"

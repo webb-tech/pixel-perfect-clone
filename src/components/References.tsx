@@ -46,11 +46,12 @@ const References = () => {
                     <h2 className="heading-lg text-foreground mb-4">
                         Ett urval av våra kundreferenser
                     </h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto text-left">
-                        Vi har utfört takarbeten runt om i hela Stockholm, från
-                        innerstad till förort, så kika gärna in på våra
-                        referensbilder för att hitta bilder från just ditt
-                        område.
+                    <p className="text-muted-foreground max-w-2xl mx-auto text-center">
+                        Vi har genomfört elinstallationer och större
+                        entreprenader i hela Stockholm, från innerstad till
+                        förort. Bläddra i våra referensprojekt för att se
+                        exempel från ditt område och få inspiration inför ert
+                        nästa projekt.
                     </p>
                 </motion.div>
 
@@ -71,7 +72,7 @@ const References = () => {
                     transition={{ duration: 0.6, delay: 0.5 }}
                     className="text-center"
                 >
-                    <a href="#referenser" className="btn-primary inline-flex">
+                    <a href="/referenser" className="btn-primary inline-flex">
                         Alla referenser
                         <ArrowRight className="w-4 h-4" />
                     </a>

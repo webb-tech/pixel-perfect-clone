@@ -44,11 +44,9 @@ const Careers = () => {
                         </h2>
 
                         <p className="text-body mb-6">
-                            Vi söker kompetenta och motiverade takläggare som
-                            delar vår passion för kvalitet och kundfokus. Om du
-                            är erfaren, trives i ett teamarbete och vill bidra
-                            till ett expanderande takläggningsföretag, vill vi
-                            höra från dig!
+                            Vi söker behöriga elektriker och montörer för
+                            entreprenad och service. Är du kundfokuserad? Hör av
+                            dig.
                         </p>
 
                         <a href="#kontakt" className="btn-primary">
