@@ -7,6 +7,9 @@ export const NewsSection = () => {
     return (
         <section className="py-20">
             <div className="section-container">
+                <div className="slug-tag flex justify-center mb-4 text-center">
+                    Nyheter
+                </div>
                 <h2 className="heading-lg text-center mb-4">
                     Senaste nytt hos MJ
                 </h2>

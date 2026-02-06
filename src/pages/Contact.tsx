@@ -68,9 +68,9 @@ const Contact = () => {
                         />
                         <h1 className="heading-lg">Kontakta oss</h1>
                         <p className="max-w-3xl">
-                            Vill du kontakta oss? Inga problem! Du kan mejla,
-                            ringa eller besöka oss. Du kan också fylla i
-                            formuläret för att be om en offert.
+                            Har du frågor eller vill diskutera ett projekt?
+                            Kontakta oss så kopplar vi dig till vårt erfarna
+                            team som hjälper dig vidare.
                         </p>
                         <div className="flex gap-6 flex-wrap font-bold text-sm">
                             <a
