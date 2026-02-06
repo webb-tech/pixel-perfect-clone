@@ -1,4 +1,5 @@
 import logo from "@/assets/img/logo.png";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -82,29 +83,71 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
+                        <div className="mt-6">
+                            <div className="flex items-center gap-4">
+                                <a
+                                    href="https://www.facebook.com"
+                                    aria-label="Facebook"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-background/70 hover:text-background transition-colors"
+                                >
+                                    <FaFacebookF
+                                        className="w-5 h-5"
+                                        aria-hidden
+                                    />
+                                </a>
+
+                                <a
+                                    href="https://www.instagram.com"
+                                    aria-label="Instagram"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-background/70 hover:text-background transition-colors"
+                                >
+                                    <FaInstagram
+                                        className="w-5 h-5"
+                                        aria-hidden
+                                    />
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com"
+                                    aria-label="LinkedIn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-background/70 hover:text-background transition-colors"
+                                >
+                                    <FaLinkedinIn
+                                        className="w-5 h-5"
+                                        aria-hidden
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Bottom Bar */}
-                <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-background/70 text-sm">
-                        © {currentYear} MJ El & Entreprenad AB. Alla rättigheter
-                        förbehållna.
-                    </p>
-                    <div className="flex items-center gap-6">
-                        <a
-                            href="#"
-                            className="text-background/70 hover:text-background transition-colors text-sm"
-                        >
-                            Integritetspolicy
-                        </a>
-                        <a
-                            href="#"
-                            className="text-background/70 hover:text-background transition-colors text-sm"
-                        >
-                            Villkor
-                        </a>
-                    </div>
+            {/* Bottom Bar */}
+            <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p className="text-background/70 text-sm">
+                    © {currentYear} MJ El & Entreprenad AB. Alla rättigheter
+                    förbehållna.
+                </p>
+                <div className="flex items-center gap-6">
+                    <a
+                        href="#"
+                        className="text-background/70 hover:text-background transition-colors text-sm"
+                    >
+                        Integritetspolicy
+                    </a>
+                    <a
+                        href="#"
+                        className="text-background/70 hover:text-background transition-colors text-sm"
+                    >
+                        Villkor
+                    </a>
                 </div>
             </div>
         </footer>
