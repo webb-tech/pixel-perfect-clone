@@ -1,5 +1,6 @@
 import { MailIcon, Phone, Pin } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import heroImg from "@/assets/img/kontaktaoss.png";
 
 const workers = [
     {
@@ -52,10 +53,10 @@ const Contact = () => {
             <section
                 className="pt-40 pb-16 text-white"
                 style={{
-                    backgroundImage: `url(${"/img/belysning.jpg"})`,
+                    backgroundImage: `url(${heroImg})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
-                    backgroundColor: "rgba(0, 0, 0, 0.8)",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
                     backgroundBlendMode: "multiply",
                 }}
             >
@@ -79,15 +80,15 @@ const Contact = () => {
                                 <Phone size={18} /> 070-123 45 67
                             </a>
                             <a
-                                href="mailto:info@mjelinstallationer.se"
+                                href="mailto:info@mjelinstallationer.com"
                                 className="flex items-center gap-2"
                             >
                                 <MailIcon size={18} />
-                                info@mjelinstallationer.se
+                                info@mjelinstallationer.com
                             </a>
                             <a href="" className="flex items-center gap-2">
                                 <Pin size={18} />
-                                Storgatan 1, 123 45
+                                Råsundavägen 4, 169 67 Solna
                             </a>
                         </div>
                     </div>

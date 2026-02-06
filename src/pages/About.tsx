@@ -1,6 +1,4 @@
-// Hero, om oss, samarbetspartners, senaste nytt
-
-import heroImg from "@/assets/img/jobba-hos-oss.jpg";
+import heroImg from "@/assets/img/omoss.png";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTA } from "@/components/CTA";
 import { NewsCard } from "@/components/NewsCard";
@@ -17,7 +15,7 @@ const About = () => {
                     backgroundImage: `url(${heroImg})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
-                    backgroundColor: "rgba(0, 0, 0, 0.8)",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
                     backgroundBlendMode: "multiply",
                 }}
             >
@@ -93,7 +91,7 @@ const About = () => {
                             .sort(
                                 (a, b) =>
                                     new Date(b.date).getTime() -
-                                    new Date(a.date).getTime()
+                                    new Date(a.date).getTime(),
                             )
                             .slice(0, 3)
                             .map((item, i) => (

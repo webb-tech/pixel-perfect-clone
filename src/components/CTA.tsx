@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import ctaImg from "@/assets/img/cta.jpg";
+import ctaImg from "@/assets/img/cta2.png";
 
 export const CTA = () => {
     return (

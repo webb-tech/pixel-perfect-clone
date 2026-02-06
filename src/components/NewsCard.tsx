@@ -52,7 +52,7 @@ export const NewsCard = ({
                 <div
                     className="rounded-sm relative"
                     style={{
-                        height: "220px",
+                        height: "250px",
                         backgroundImage: `url(${thumbnailImg})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",

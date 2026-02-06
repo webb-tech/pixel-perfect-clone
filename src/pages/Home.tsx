@@ -6,9 +6,10 @@ import FAQ from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import Careers from "@/components/Careers";
 import ImageBlock from "@/components/ImageBlock";
+import { NewsSection } from "@/components/NewsSection";
 
 import img from "@/assets/img/elinstallation.jpg";
-import { NewsSection } from "@/components/NewsSection";
+import billaddarImg from "@/assets/img/billaddare.png";
 
 const Home = () => {
     return (
@@ -18,7 +19,7 @@ const Home = () => {
             <Video />
             <References />
             <ImageBlock
-                backgroundImg={img}
+                backgroundImg={billaddarImg}
                 title="Skalbara lösningar för elbilsladdning"
                 text="Som en ledande leverantör erbjuder vi skräddarsydda, skalbara lösningar för elbilsladdning till företag, fastighetsägare och bostadsrättsföreningar. Vi ansvarar för design, installation, drift och service med hög säkerhet och driftsäkerhet."
                 btnLabel="Läs mer"
